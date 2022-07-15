@@ -2,13 +2,20 @@ module.exports = {
   siteMetadata: {
     title: `Jo's Developer Cheat Sheet`,
     description: `My cheat sheet of helpful web developer code snippets and theories!`,
-    author: `@gatsbyjs`,
-    siteUrl: ``,
+    author: `Jo Blaszak`,
+    // siteUrl: ``,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `data`,
+        path: `${__dirname}/data`,
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {

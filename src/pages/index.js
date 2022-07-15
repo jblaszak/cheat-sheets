@@ -7,15 +7,20 @@ import * as styles from "../components/index.module.css"
 
 const IndexPage = ({ data }) => {
   const categories = {}
-  for (let node of data.allFile.nodes) {
-    console.log("node", node)
-    if (categories[node.relativeDirectory]) {
-      categories[node.relativeDirectory].push(node.name)
+  for (let node of data.allMdx.nodes) {
+    if (categories[node.frontmatter.category]) {
+      categories[node.frontmatter.category].push({
+        title: node.frontmatter.title,
+        slug: node.slug,
+      })
     } else {
-      categories[node.relativeDirectory] = [node.name]
+      categories[node.frontmatter.category] = [
+        { title: node.frontmatter.title, slug: node.slug },
+      ]
     }
   }
-  console.log("categories:", categories)
+
+  console.log(categories)
 
   return (
     <Layout>
@@ -24,8 +29,8 @@ const IndexPage = ({ data }) => {
         <h1>Welcome to Jo's Developer Cheat Sheet</h1>
       </div>
       <div>
-        {Object.keys(categories).map(key => (
-          <CategoriesList key={key} title={key} articles={categories[key]} />
+        {Object.keys(categories).map(node => (
+          <CategoriesList key={node} title={node} articles={categories[node]} />
         ))}
       </div>
     </Layout>
@@ -34,10 +39,16 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query MyQuery {
-    allFile {
+    allMdx(sort: { fields: frontmatter___categoryOrder, order: ASC }) {
       nodes {
-        name
-        relativeDirectory
+        frontmatter {
+          title
+          category
+          categoryOrder
+          articleOrder
+        }
+        id
+        slug
       }
     }
   }

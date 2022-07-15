@@ -9,7 +9,7 @@ const CategoriesList = ({ title, articles }) => {
       <ul>
         {articles.map(article => (
           <li key={article}>
-            <Link>{article}</Link>
+            <Link to={`/${article.slug.toLowerCase()}/`}>{article.title}</Link>
           </li>
         ))}
       </ul>

@@ -4,12 +4,52 @@ category: "HTML"
 categoryOrder: 1
 articleOrder: 1
 ---
-Some example basics for coding in html!
+
+HTML stands for Hyper Text Markup Language!
+
+
+### Declare HTML Version
+Tell the browser which HTML version to use, defaults to latest version. Useful for older browsers.
+```
+<!DOCTYPE html>
+```
+
+### Tags
+HTML is structured by wrapping content with tags corresponding to that element.
+```
+<tagname>Content</tagname>
+```
+
+### Self Closing Tags
+Certain tags don't have content so they are considered self closing
+```
+<hr>
+or also (based on personal preference)
+<hr />
+```
+### Attributes
+Tags also have attributes, with values between quotes.  Some attributes can be left without values and are considered to be "true".
+The two examples below are treated the same.
+```
+<input type="text" required="true" />
+<input type="text" required />
+```
+### Comments
+Creating comments in HTML
+```
+<!-- this is 
+a comment  in HTML-->
+```
+
+### Basic HTML Page Structure
 
 ```
-<hmtl>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
     <body>
-        <h1>Title!</h1>
+        Page Content
     </body>
 </html>
 ```

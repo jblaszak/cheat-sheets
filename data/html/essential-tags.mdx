@@ -1,0 +1,109 @@
+---
+title: "Essential Tags"
+category: "HTML"
+categoryOrder: 1
+articleOrder: 3
+---
+
+# Paragraph
+```
+<p>Some paragraph text!<p>
+```
+
+# Heading Tags
+h1 is top level while h2 is a subheading, etc.  Not meant to choose font-size but rather semantic structure.
+```
+<h1>Main Heading</h1>
+<h2>Secondary heading</h2>
+<!-- ... -->
+<h6>Lowest possible subheading</h6>
+```
+
+# Images
+Has two required tags, src and alt.  Src is for path to the image and alt is for the alternative text that
+gets displayed when using screen readers or if the image cannot be displayed.
+```
+<img src="myImage.jpg" alt="image alt text" />
+```
+
+# List Item
+Note: must be between tags for unordered or ordered list (see below). Often used to contain navigation links 
+with modified list styling.
+```
+<li>My list item</li>
+```
+
+# Unordered List
+Used for when the list order does not matter.
+```
+<ul>
+    <li>Unordered List Item #1</li>
+    <li>Unordered List Item #2</li>
+</ul>
+```
+
+# Ordered List
+Used for when list order DOES matter, items are numbered/lettered depending on the type set.
+```
+<ol>
+    <li>Unordered List Item #1</li>
+    <li>Unordered List Item #2</li>
+</ol>
+```
+
+# Nested Lists
+```
+<ol>
+    <li>Unordered List Item #1</li>
+    <li>Unordered List Item #2</li>
+    <ul>
+        <li>Unordered List Item #1</li>
+        <li>Unordered List Item #2</li>
+    </ul>
+</ol>
+```
+
+# Preformatted Text
+Used when it is necessary to preserve whitespaces. Note: HTML default is to ignore more than one consecutive white space.
+```
+<pre>
+   /\_/\
+  ( o.o )
+   > ^ <
+</pre>
+```
+
+# Line Break
+Creates a break in the flow of text. Should not be used for spacing of text. Use CSS for that.
+```
+<p> Some text, <br>
+    and now some text on a new line!
+</p>
+```
+
+# Horizontal Rule
+Creates a horizontal line across the container.  Used to create a break between content.
+```
+<p>First part of content</p>
+<hr>
+<p>Second part of content</p>
+```
+
+# Anchor Tag (Link)
+Used to link to other documents/pages on the web or server.  Requires an href attribute to store the path
+to the page being linked to.
+```
+<a href="https://www.mycoolpage.com">My Cool Page</a>
+```
+
+# Italics (Emphasis)
+Use this for better semantics.
+```
+<p>My <em>fancy</em> text!</p>
+```
+
+# Bold (Strong)
+Use this for better semantics.
+```
+<p>My <strong>BOLD</strong> text!</p>
+```

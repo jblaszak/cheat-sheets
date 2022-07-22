@@ -74,7 +74,7 @@ Used when it is necessary to preserve whitespaces. Note: HTML default is to igno
 ```
 
 # Line Break
-Creates a break in the flow of text. Should not be used for spacing of text. Use CSS for that.
+Creates a semantic break in the flow of text. Should not be used for spacing of text. Use CSS for that.
 ```
 <p> Some text, <br>
     and now some text on a new line!
@@ -91,9 +91,9 @@ Creates a horizontal line across the container.  Used to create a break between 
 
 # Anchor Tag (Link)
 Used to link to other documents/pages on the web or server.  Requires an href attribute to store the path
-to the page being linked to.
+to the page being linked to. Optional (target attribute), can be set to "_blank" to open in new tab/window.
 ```
-<a href="https://www.mycoolpage.com">My Cool Page</a>
+<a href="https://www.mycoolpage.com" target="_blank">My Cool Page</a>
 ```
 
 # Italics (Emphasis)

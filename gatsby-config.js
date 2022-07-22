@@ -16,19 +16,7 @@ module.exports = {
         path: `${__dirname}/data`,
       },
     },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        rehypePlugins: [
-          // Generate heading ids for rehype-autolink-headings
-          import("rehype-slug"),
-          // To pass options, use a 2-element array with the
-          // configuration in an object in the second element
-          [import("rehype-autolink-headings"), { behavior: "wrap" }],
-          import("rehype-prism"),
-        ],
-      },
-    },
+    `gatsby-plugin-mdx`,
     // {
     //   resolve: `gatsby-transformer-remark`,
     //   options: {

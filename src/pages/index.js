@@ -1,57 +1,42 @@
 import * as React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import CategoriesList from "../components/categories-list"
 import * as styles from "../components/index.module.css"
 
-const IndexPage = ({ data }) => {
-  const categories = {}
-  for (let node of data.allMdx.nodes) {
-    if (categories[node.frontmatter.category]) {
-      categories[node.frontmatter.category].push({
-        title: node.frontmatter.title,
-        slug: node.slug,
-      })
-    } else {
-      categories[node.frontmatter.category] = [
-        { title: node.frontmatter.title, slug: node.slug },
-      ]
-    }
-  }
-
-  console.log(categories)
+const IndexPage = () => {
+  const categoryData = [
+    {
+      categoryTitle: "HTML",
+      articles: [
+        { title: "HTML Basics", path: "/html/basics" },
+        { title: "Semantic HTML", path: "/html/semantic-html" },
+        { title: "Essential HTML Tags", path: "/html/essential-tags" },
+      ],
+    },
+    {
+      categoryTitle: "Markdown",
+      articles: [{ title: "Markdown", path: "/markdown/markdown" }],
+    },
+  ]
 
   return (
     <Layout>
       <Seo title="Jo's Developer Cheat Sheet - Home" />
-      <div className={styles.textCenter}>
+      <header className={styles.textCenter}>
         <h1>Welcome to Jo's Developer Cheat Sheet</h1>
-      </div>
-      <div>
-        {Object.keys(categories).map(node => (
-          <CategoriesList key={node} title={node} articles={categories[node]} />
+      </header>
+      <article>
+        {categoryData.map(category => (
+          <CategoriesList
+            key={category.categoryTitle}
+            title={category.categoryTitle}
+            articles={category.articles}
+          />
         ))}
-      </div>
+      </article>
     </Layout>
   )
 }
-
-export const query = graphql`
-  query MyQuery {
-    allMdx(sort: { fields: frontmatter___categoryOrder, order: ASC }) {
-      nodes {
-        frontmatter {
-          title
-          category
-          categoryOrder
-          articleOrder
-        }
-        id
-        slug
-      }
-    }
-  }
-`
 
 export default IndexPage

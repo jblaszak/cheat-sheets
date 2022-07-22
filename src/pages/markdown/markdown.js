@@ -1,9 +1,9 @@
 import * as React from "react"
 import CheatPage from "../../template/cheatPage"
-import { pageData } from "../../data/html/basics"
+import { pageData } from "../../data/markdown/markdown"
 
-const HTMLBasicsPage = () => {
+const MarkdownPage = () => {
   return <CheatPage pageData={pageData} />
 }
 
-export default HTMLBasicsPage
+export default MarkdownPage

@@ -9,14 +9,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: `data`,
-        path: `${__dirname}/data`,
-      },
-    },
-    `gatsby-plugin-mdx`,
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: `data`,
+    //     path: `${__dirname}/data`,
+    //   },
+    // },
+    // `gatsby-plugin-mdx`,
     // {
     //   resolve: `gatsby-transformer-remark`,
     //   options: {

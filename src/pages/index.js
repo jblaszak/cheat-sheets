@@ -10,7 +10,7 @@ const IndexPage = () => {
       categoryTitle: "HTML",
       articles: [
         { title: "HTML Basics", path: "/html/basics" },
-        { title: "Semantic HTML", path: "/html/semantic-html" },
+        { title: "Semantic HTML", path: "/html/semantic-tags" },
         { title: "Essential HTML Tags", path: "/html/essential-tags" },
       ],
     },

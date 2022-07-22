@@ -13,11 +13,16 @@ const IndexPage = () => {
         { title: "Semantic HTML", path: "/html/semantic-tags" },
         { title: "Essential HTML Tags", path: "/html/essential-tags" },
         { title: "Tables", path: "/html/tables" },
+        { title: "Forms", path: "/html/forms" },
       ],
     },
     {
       categoryTitle: "Markdown",
       articles: [{ title: "Markdown", path: "/markdown/markdown" }],
+    },
+    {
+      categoryTitle: "Theory",
+      articles: [{ title: "Websites", path: "/theory/websites" }],
     },
   ]
 

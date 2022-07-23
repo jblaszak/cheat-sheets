@@ -15,6 +15,7 @@ const IndexPage = () => {
         { title: "Tables", path: "/html/tables" },
         { title: "Forms", path: "/html/forms" },
         { title: "Accessibility", path: "/html/accessibility" },
+        { title: "Meta Tags", path: "/html/meta-tags" },
       ],
     },
     {

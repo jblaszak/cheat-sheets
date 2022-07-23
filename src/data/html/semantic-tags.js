@@ -8,8 +8,11 @@ export const pageData = {
       title: "Navigation",
       items: [
         {
+          data: `Used to group navigation links.`,
+        },
+        {
           language: "html",
-          data: `<nav>Used to group navigation links.</nav>`,
+          data: `<nav>Some links here.</nav>`,
         },
       ],
     },
@@ -17,8 +20,11 @@ export const pageData = {
       title: "Main",
       items: [
         {
+          data: `The main content of the page, limited to one per page.`,
+        },
+        {
           language: "html",
-          data: `<main>The main content of the page, limited to one per page.</main>`,
+          data: `<main>Main content here.</main>`,
         },
       ],
     },
@@ -26,8 +32,11 @@ export const pageData = {
       title: "Header",
       items: [
         {
+          data: `Used to introduce content. Does not need to be at top of page and can be within different areas of the page.`,
+        },
+        {
           language: "html",
-          data: `<header>Used to introduce content. Does not need to be at top of page and can be within different areas of the page.</header>`,
+          data: `<header>Some info about what's below</header>`,
         },
       ],
     },
@@ -35,8 +44,11 @@ export const pageData = {
       title: "Article",
       items: [
         {
+          data: `A self contained piece of content that would make sense on its own.`,
+        },
+        {
           language: "html",
-          data: `<article>A self contained piece of content that would make sense on its own</article>`,
+          data: `<article>My awesome article</article>`,
         },
       ],
     },
@@ -44,8 +56,11 @@ export const pageData = {
       title: "Section",
       items: [
         {
+          data: `Content that can be grouped together with other sections and would not make sense on its own.`,
+        },
+        {
           language: "html",
-          data: `<section>Content that can be grouped together with other sections and would not make sense on its own.</section>`,
+          data: `<section>Section of subsection!</section>`,
         },
       ],
     },
@@ -53,8 +68,11 @@ export const pageData = {
       title: "Aside",
       items: [
         {
+          data: `Supplemental content indireclty related to the main content but isn't required to understand the main content.`,
+        },
+        {
           language: "html",
-          data: `<aside>Supplemental content indireclty related to the main content but isn't required to understand the main content.</aside>`,
+          data: `<aside>Supplemental info here.</aside>`,
         },
       ],
     },
@@ -78,8 +96,11 @@ export const pageData = {
       title: "Footer",
       items: [
         {
+          data: `At the bottom of the page/area.  If used at bottom of page often has some navigation links or copyright information..`,
+        },
+        {
           language: "html",
-          data: `<footer>At the bottom of the page/area.  If used at bottom of page often has some navigation links or copyright information.</footer>`,
+          data: `<footer>Cool footer here. Look at me! Copyright - Me!</footer>`,
         },
       ],
     },

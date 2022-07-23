@@ -106,7 +106,7 @@ export const pageData = {
         {
           language: "html",
           data: `<pre>
-   /\_/\
+   /\\_/\\
   ( o.o )
    > ^ <
 </pre>`,

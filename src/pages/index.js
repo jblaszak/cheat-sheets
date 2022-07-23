@@ -14,6 +14,7 @@ const IndexPage = () => {
         { title: "Essential HTML Tags", path: "/html/essential-tags" },
         { title: "Tables", path: "/html/tables" },
         { title: "Forms", path: "/html/forms" },
+        { title: "Accessibility", path: "/html/accessibility" },
       ],
     },
     {

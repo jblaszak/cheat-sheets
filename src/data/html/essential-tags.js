@@ -178,5 +178,20 @@ export const pageData = {
         },
       ],
     },
+    {
+      title: "Link Tag",
+      items: [
+        {
+          data: `Specifies the relationship between the current document and an external resource like a favicon,
+            stylesheet, or custom font.`,
+        },
+        {
+          language: "html",
+          data: `<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+  <link rel="stylesheet" href="myStyles.css"/>
+  <link rel="preload" href="myFont.woff2" as="font" type="font/woff2" crossorigin="anonymous">`,
+        },
+      ],
+    },
   ],
 }

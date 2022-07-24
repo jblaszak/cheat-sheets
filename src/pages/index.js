@@ -19,6 +19,10 @@ const IndexPage = () => {
       ],
     },
     {
+      categoryTitle: "CSS",
+      articles: [{ title: "CSS Basics", path: "/css/basics" }],
+    },
+    {
       categoryTitle: "Markdown",
       articles: [{ title: "Markdown", path: "/markdown/markdown" }],
     },

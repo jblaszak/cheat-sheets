@@ -4,119 +4,114 @@ export const pageData = {
   This can help web crawlers better determine what's important on a page and improves
   accessibility!`,
   cheats: [
-    {
-      title: "Navigation",
-      items: [
-        {
-          data: `Used to group navigation links.`,
-        },
-        {
+    [
+      { h2: "Navigation" },
+      { p: `Used to group navigation links.` },
+      {
+        code: {
           language: "html",
-          data: `<nav>Some links here.</nav>`,
+          code: `<nav>Some links here.</nav>`,
         },
-      ],
-    },
-    {
-      title: "Main",
-      items: [
-        {
-          data: `The main content of the page, limited to one per page.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Main" },
+      { p: `The main content of the page, limited to one per page.` },
+      {
+        code: {
           language: "html",
-          data: `<main>Main content here.</main>`,
+          code: `<main>Main content here.</main>`,
         },
-      ],
-    },
-    {
-      title: "Header",
-      items: [
-        {
-          data: `Used to introduce content. Does not need to be at top of page and can be within different areas of the page.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Header" },
+      {
+        p: `Used to introduce content. Does not need to be at top of page and can be within different areas of the page.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<header>Some info about what's below</header>`,
+          code: `<header>Some info about what's below</header>`,
         },
-      ],
-    },
-    {
-      title: "Article",
-      items: [
-        {
-          data: `A self contained piece of content that would make sense on its own.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Article" },
+      {
+        p: `A self contained piece of content that would make sense on its own.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<article>My awesome article</article>`,
+          code: `<article>My awesome article</article>`,
         },
-      ],
-    },
-    {
-      title: "Section",
-      items: [
-        {
-          data: `Content that can be grouped together with other sections and would not make sense on its own.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Section" },
+      {
+        p: `Content that can be grouped together with other sections and would not make sense on its own.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<section>Section of subsection!</section>`,
+          code: `<section>Section of subsection!</section>`,
         },
-      ],
-    },
-    {
-      title: "Aside",
-      items: [
-        {
-          data: `Supplemental content indireclty related to the main content but isn't required to understand the main content.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Aside" },
+      {
+        p: `Supplemental content indireclty related to the main content but isn't required to understand the main content.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<aside>Supplemental info here.</aside>`,
+          code: `<aside>Supplemental info here.</aside>`,
         },
-      ],
-    },
-    {
-      title: "Figure and Figcaption",
-      items: [
-        {
-          data: `Used to contain an image, diagram or code snippet and group it with the description of that
-            content.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Figure and Figcaption" },
+      {
+        p: `Used to contain an image, diagram or code snippet and group it with the description of that content.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<figure>
-    <img src="image.jpg">
-    <figcaption>A caption describing the above image.</figcaption>
+          code: `<figure>
+  <img src="image.jpg">
+  <figcaption>A caption describing the above image.</figcaption>
 </figure>`,
         },
-      ],
-    },
-    {
-      title: "Footer",
-      items: [
-        {
-          data: `At the bottom of the page/area.  If used at bottom of page often has some navigation links or copyright information..`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Footer" },
+      {
+        p: `At the bottom of the page/area.  If used at bottom of page often has some navigation links or copyright information..`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<footer>Cool footer here. Look at me! Copyright - Me!</footer>`,
+          code: `<footer>Cool footer here. Look at me! Copyright - Me!</footer>`,
         },
-      ],
-    },
-    {
-      title: "Media",
-      items: [
-        {
-          data: `These describe the media content, though embed can be used for any media.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Media" },
+      {
+        p: `These describe the media content, though embed can be used for any media.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<video src="my-video.mp4">Text for when video not supported</video>
+          code: `<video src="my-video.mp4">Text for when video not supported</video>
 <audio src="koreanhiphop.mp3"></audio>
 <embed src="babyyoda.gif"/>`,
         },
-      ],
-    },
+      },
+    ],
   ],
 }

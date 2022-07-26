@@ -1,197 +1,188 @@
 export const pageData = {
   pageTitle: "HTML Essential Tags",
+  // pageInfo: "",
   cheats: [
-    {
-      title: "Paragraph",
-      items: [
-        {
+    [
+      { h2: "Paragraph" },
+      {
+        code: {
           language: "html",
-          data: `<p>Some paragraph text!<p>`,
+          code: `<p>Some paragraph text!<p>`,
         },
-      ],
-    },
-    {
-      title: "Heading Tags",
-      items: [
-        {
-          data: "h1 is top level while h2 is a subheading, etc.  Not meant to choose font-size but rather semantic structure.",
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Heading Tags" },
+      {
+        p: "h1 is top level while h2 is a subheading, etc.  Not meant to choose font-size but rather semantic structure.",
+      },
+      {
+        code: {
           language: "html",
-          data: `<h1>Main Heading</h1>
+          code: `<h1>Main Heading</h1>
 <h2>Secondary heading</h2>
 <!-- ... -->
 <h6>Lowest possible subheading</h6>`,
         },
-      ],
-    },
-    {
-      title: "Images",
-      items: [
-        {
-          data: `Has two required tags, src and alt.  Src is for path to the image and alt is for the alternative text that
-            gets displayed when using screen readers or if the image cannot be displayed.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Images" },
+      {
+        p: `Has two required tags, src and alt.  Src is for path to the image and alt is for the alternative text thatgets displayed when using screen readers or if the image cannot be displayed.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<img src="myImage.jpg" alt="image alt text" />`,
+          code: `<img src="myImage.jpg" alt="image alt text" />`,
         },
-      ],
-    },
-    {
-      title: "List Item",
-      items: [
-        {
-          data: `Note: must be between tags for unordered or ordered list (see below). Often used to contain navigation links 
-            with modified list styling.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "List Item" },
+      {
+        p: `Note: must be between tags for unordered or ordered list (see below). Often used to contain navigation links with modified list styling.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<li>My list item</li>`,
+          code: `<li>My list item</li>`,
         },
-      ],
-    },
-    {
-      title: "Unordered List",
-      items: [
-        {
-          data: `Used for when the list order does not matter.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Unordered List" },
+      { p: `Used for when the list order does not matter.` },
+      {
+        code: {
           language: "html",
-          data: `<ul>
-    <li>Unordered List Item #1</li>
-    <li>Unordered List Item #2</li>
+          code: `<ul>
+  <li>Unordered List Item #1</li>
+  <li>Unordered List Item #2</li>
 </ul>`,
         },
-      ],
-    },
-    {
-      title: "Ordered List",
-      items: [
-        {
-          data: `Used for when list order DOES matter, items are numbered/lettered depending on the type set.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Ordered List" },
+      {
+        p: `Used for when list order DOES matter, items are numbered/lettered depending on the type set.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<ol>
-    <li>Unordered List Item #1</li>
-    <li>Unordered List Item #2</li>
+          code: `<ol>
+  <li>Unordered List Item #1</li>
+  <li>Unordered List Item #2</li>
 </ol>`,
         },
-      ],
-    },
-    {
-      title: "Nested Lists",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Nested Lists" },
+      {
+        code: {
           language: "html",
-          data: `<ol>
+          code: `<ol>
+  <li>Unordered List Item #1</li>
+  <li>Unordered List Item #2</li>
+  <ul>
     <li>Unordered List Item #1</li>
     <li>Unordered List Item #2</li>
-    <ul>
-        <li>Unordered List Item #1</li>
-        <li>Unordered List Item #2</li>
-    </ul>
+  </ul>
 </ol>`,
         },
-      ],
-    },
-    {
-      title: "Preformatted Text",
-      items: [
-        {
-          data: `Used when it is necessary to preserve whitespaces. Note: HTML default is to ignore more than one consecutive white space.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Preformatted Text" },
+      {
+        p: `Used when it is necessary to preserve whitespaces. Note: HTML default is to ignore more than one consecutive white space.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<pre>
+          code: `<pre>
    /\\_/\\
   ( o.o )
    > ^ <
 </pre>`,
         },
-      ],
-    },
-    {
-      title: "Line Break",
-      items: [
-        {
-          data: `Creates a semantic break in the flow of text. Should not be used for spacing of text. Use CSS for that.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Line Break" },
+      {
+        p: `Creates a semantic break in the flow of text. Should not be used for spacing of text. Use CSS for that.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<p> Some text, <br>
-    and now some text on a new line!
+          code: `<p> Some text, <br>
+  and now some text on a new line!
 </p>`,
         },
-      ],
-    },
-    {
-      title: "Horizontal Rule",
-      items: [
-        {
-          data: `Creates a horizontal line across the container.  Used to create a break between content.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Horizontal Rule" },
+      {
+        p: `Creates a horizontal line across the container.  Used to create a break between content.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<p>First part of content</p>
+          code: `<p>First part of content</p>
 <hr>
 <p>Second part of content</p>`,
         },
-      ],
-    },
-    {
-      title: "Anchor Tag (Link)",
-      items: [
-        {
-          data: `Used to link to other documents/pages on the web or server.  Requires an href attribute to store the path
-                  to the page being linked to. Optional (target attribute), can be set to "_blank" to open in new tab/window.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Anchor Tag (Link)" },
+      {
+        p: `Used to link to other documents/pages on the web or server.  Requires an href attribute to store the path to the page being linked to. Optional (target attribute), can be set to "_blank" to open in new tab/window.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<a href="https://www.mycoolpage.com" target="_blank">My Cool Page</a>`,
+          code: `<a href="https://www.mycoolpage.com" target="_blank">My Cool Page</a>`,
         },
-      ],
-    },
-    {
-      title: "Italics (Emphasis)",
-      items: [
-        {
-          data: `Use this for better semantics.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Italics (Emphasis)" },
+      { p: `Use this for better semantics.` },
+      {
+        code: {
           language: "html",
-          data: `<p>My <em>fancy</em> text!</p>`,
+          code: `<p>My <em>fancy</em> text!</p>`,
         },
-      ],
-    },
-    {
-      title: "Bold (Strong)",
-      items: [
-        {
-          data: `Use this for better semantics.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Bold (Strong)" },
+      { p: `Use this for better semantics.` },
+      {
+        code: {
           language: "html",
-          data: `<p>My <strong>BOLD</strong> text!</p>`,
+          code: `<p>My <strong>BOLD</strong> text!</p>`,
         },
-      ],
-    },
-    {
-      title: "Link Tag",
-      items: [
-        {
-          data: `Specifies the relationship between the current document and an external resource like a favicon,
-            stylesheet, or custom font.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Link Tag" },
+      {
+        p: `Specifies the relationship between the current document and an external resource like a favicon, stylesheet, or custom font.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
-  <link rel="stylesheet" href="myStyles.css"/>
-  <link rel="preload" href="myFont.woff2" as="font" type="font/woff2" crossorigin="anonymous">`,
+          code: `<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+<link rel="stylesheet" href="myStyles.css"/>
+<link rel="preload" href="myFont.woff2" as="font" type="font/woff2" crossorigin="anonymous">`,
         },
-      ],
-    },
+      },
+    ],
   ],
 }

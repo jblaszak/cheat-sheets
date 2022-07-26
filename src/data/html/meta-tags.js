@@ -3,64 +3,61 @@ export const pageData = {
   pageInfo: `Meta tags are used to provide extra data about a webpage, like how it should show up on search engines or
     social media sites!  They are placed within the <head></head> portion of an HTML document.`,
   cheats: [
-    {
-      title: "Charset",
-      items: [
-        {
-          data: `Sets the character encoding for the page. UTF-8 is most common as it contains most characters in most languages.`,
-        },
-        {
+    [
+      { h2: "Charset" },
+      {
+        p: `Sets the character encoding for the page. UTF-8 is most common as it contains most characters in most languages.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<meta charset="utf-8" />`,
+          code: `<meta charset="utf-8" />`,
         },
-      ],
-    },
-    {
-      title: "Viewport",
-      items: [
-        {
-          data: `Allows for custom responsive CSS as opposed to the default scaling behaviour of small devices (pretends it's larger
-          than it is and just shows everything super small).`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Viewport" },
+      {
+        p: `Allows for custom responsive CSS as opposed to the default scaling behaviour of small devices (pretends it's larger than it is and just shows everything super small).`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<meta name="viewport" content="width=device-width, initial-scale=1" />`,
+          code: `<meta name="viewport" content="width=device-width, initial-scale=1" />`,
         },
-      ],
-    },
-    {
-      title: "Page Author",
-      items: [
-        {
-          data: `Set the author of the page.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Page Author" },
+      { p: `Set the author of the page.` },
+      {
+        code: {
           language: "html",
-          data: `<meta name="author" content="My Name" />`,
+          code: `<meta name="author" content="My Name" />`,
         },
-      ],
-    },
-    {
-      title: "Page Description",
-      items: [
-        {
-          data: `Set the description of the page (up to 155 characters) that will show on search engines.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Page Description" },
+      {
+        p: `Set the description of the page (up to 155 characters) that will show on search engines.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<meta name="description" content="My awesome site description that is super cool." />`,
+          code: `<meta name="description" content="My awesome site description that is super cool." />`,
         },
-      ],
-    },
-    {
-      title: "Social Meta Tags",
-      items: [
-        {
-          data: `When you link to your site from social media, these tags define how those links look like!`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Social Meta Tags" },
+      {
+        p: `When you link to your site from social media, these tags define how those links look like!`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<!--  Essential META Tags -->
+          code: `<!--  Essential META Tags -->
 <meta property="og:title" content="My Awesome Site" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="og.png" />
@@ -76,25 +73,22 @@ export const pageData = {
 <meta property="fb:app_id" content="your_app_id" />
 <meta name="twitter:site" content="@MyTwitterHandle" />`,
         },
-        {
-          link: "https://css-tricks.com/essential-meta-tags-social-media/",
-        },
-      ],
-    },
-    {
-      title: "Favicon",
-      items: [
-        {
-          data: `An icon for your page that can be displayed in the browser tab and other places. Best practice
-                to use multiple sizes like 16x16, 32x32 pixels.`,
-        },
-        {
+      },
+      { link: "https://css-tricks.com/essential-meta-tags-social-media/" },
+    ],
+    [
+      { h2: "Favicon" },
+      {
+        p: `An icon for your page that can be displayed in the browser tab and other places. Best practice to use multiple sizes like 16x16, 32x32 pixels.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+          code: `<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
 `,
         },
-      ],
-    },
+      },
+    ],
   ],
 }

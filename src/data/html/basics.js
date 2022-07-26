@@ -2,86 +2,83 @@ export const pageData = {
   pageTitle: "HTML Basics",
   pageInfo: `HTML stands for Hyper Text Markup Language!`,
   cheats: [
-    {
-      title: "Declare HTML Version",
-      items: [
-        {
-          data: "Tell the browser which HTML version to use, defaults to latest version. Useful for older browsers.",
-        },
-        {
+    [
+      { h2: "Declare HTML Version" },
+      {
+        p: "Tell the browser which HTML version to use, defaults to latest version. Useful for older browsers.",
+      },
+      {
+        code: {
           language: "html",
-          data: `<!DOCTYPE html>`,
+          code: `<!DOCTYPE html>`,
         },
-      ],
-    },
-    {
-      title: "Tags",
-      items: [
-        {
-          data: "HTML is structured by wrapping content with tags corresponding to that element.",
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Tags" },
+      {
+        p: "HTML is structured by wrapping content with tags corresponding to that element.",
+      },
+      {
+        code: {
           language: "html",
-          data: `<tagname>Content</tagname>`,
+          code: `<tagname>Content</tagname>`,
         },
-      ],
-    },
-    {
-      title: "Self Closing Tags",
-      items: [
-        {
-          data: "Certain tags don't have content so they are considered self closing.",
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Self Closing Tags" },
+      {
+        p: "Certain tags don't have content so they are considered self closing.",
+      },
+      {
+        code: {
           language: "html",
-          data: `<hr>
-or also (based on personal preference)
-<hr />`,
+          code: `<hr>
+    or also (based on personal preference)
+    <hr />`,
         },
-      ],
-    },
-    {
-      title: "Attributes",
-      items: [
-        {
-          data: `Tags also have attributes, with values between quotes.  Some attributes can be left without values and are considered to be "true".
-          The two examples below are treated the same.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Attributes" },
+      {
+        p: `Tags also have attributes, with values between quotes.  Some attributes can be left without values and are considered to be "true". The two examples below are treated the same.`,
+      },
+      {
+        code: {
           language: "html",
-          data: `<input type="text" required="true" />
+          code: `<input type="text" required="true" />
 <input type="text" required />`,
         },
-      ],
-    },
-    {
-      title: "Comments",
-      items: [
-        {
-          data: `Creating comments in HTML.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Comments" },
+      { p: `Creating comments in HTML.` },
+      {
+        code: {
           language: "html",
-          data: `<!-- this is 
+          code: `<!-- this is 
 a comment  in HTML-->`,
         },
-      ],
-    },
-    {
-      title: "Basic HTML Page Structure",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Basic HTML Page Structure" },
+      {
+        code: {
           language: "html",
-          data: `<html>
-    <head>
-        <title>Page Title</title>
-    </head>
-    <body>
-        Page Content
-    </body>
+          code: `<html>
+<head>
+  <title>Page Title</title>
+</head>
+<body>
+  Page Content
+</body>
 </html>`,
         },
-      ],
-    },
+      },
+    ],
   ],
 }

@@ -2,51 +2,106 @@ export const pageData = {
   pageTitle: "Pseudo Classes and Elements",
   pageInfo: `Selectors are used to describe which elements a ruleset will target.`,
   cheats: [
-    {
-      title: "Pseudo Classes",
-      items: [
-        {
-          data: `These are used to select based on the current state of an element.  All begin with ':' 
-            and then the state they select for.`,
-        },
-        {
-          link: `https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes`,
-        },
-        {
-          data: `Links`,
-        },
-        {
-          data: `Matching links that have not been visited, links that have been visited, and both!`,
-        },
-        {
+    [
+      {
+        h1: "Pseudo Classes",
+      },
+      {
+        p: `These are used to select based on the current state of an element.  All begin with ':' and then the state they select for.`,
+      },
+      {
+        link: `https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes`,
+      },
+      {
+        blah: "test failure",
+      },
+    ],
+    [
+      {
+        h2: `Links`,
+      },
+      {
+        p: `Matching links that have not been visited, links that have been visited, and both!`,
+      },
+      {
+        code: {
           language: `css`,
-          data: `.mylink:link{}`,
+          code: `.mylink:link{}`,
         },
-        {
-          data: `Matching links that have been visited`,
-        },
-        {
+      },
+      {
+        p: `Matching links that have been visited`,
+      },
+      {
+        code: {
           language: `css`,
-          data: `.mylink:visited{}`,
+          code: `.mylink:visited{}`,
         },
-        {
-          data: `Matching either visited or non-visited links.`,
-        },
-        {
+      },
+      {
+        p: `Matching either visited or non-visited links.`,
+      },
+      {
+        code: {
           language: `css`,
-          data: `.mylink:all-links{}`,
+          code: `.mylink:all-links{}`,
         },
-        {
-          data: `User actions - matching elements that are interacted with the user by some way. `,
-        },
-        {
-          data: `Selected when element is hovered over by the mouse `,
-        },
-        {
+      },
+    ],
+    [
+      {
+        h2: `User actions - matching elements that are interacted with the user by some way. `,
+      },
+      {
+        p: `Selected when element is hovered over by the mouse.`,
+      },
+      {
+        code: {
           language: `css`,
-          data: `.myElement:hover{}`,
+          code: `.myElement:hover{}`,
         },
-      ],
-    },
+      },
+      {
+        p: `Selected when element is actived by user, example clicked on.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `.myElement:active{}`,
+        },
+      },
+      {
+        p: `Selected when element is focused`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `.myElement:focus{}`,
+        },
+      },
+      {
+        p: `Selected when element or any of its descendents is focused`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `.myElement:focus-within{}`,
+        },
+      },
+    ],
+    [
+      {
+        h2: `Form Elements`,
+      },
+      {
+        p: `Disabled - `,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `.myElement:focus-within{}`,
+        },
+      },
+    ],
   ],
 }

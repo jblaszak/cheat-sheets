@@ -14,11 +14,11 @@ const Template = ({ pageData }) => {
           <h1>{pageData.pageTitle}</h1>
           {pageData.pageInfo ? <p>{pageData.pageInfo}</p> : null}
         </header>
-        <section>
-          {pageData.cheats.map(cheat => (
+        {pageData.cheats.map(cheat => (
+          <section>
             <Cheat title={cheat.title} items={cheat.items} />
-          ))}
-        </section>
+          </section>
+        ))}
       </article>
     </Layout>
   )

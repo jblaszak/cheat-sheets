@@ -3,6 +3,46 @@ export const pageData = {
   pageInfo: `Selectors are used to describe which elements a ruleset will target.`,
   cheats: [
     [
+      { h2: `Specificity` },
+      {
+        p: `Specificity defines which declaration of a property value is used if two or more declarations for the same
+      property value exist.  It is done by calculating the weight of three categories - ID, CLASS, TYPE. Then, starting the ID
+      category, values are compared and the one with the higher value is chosen.  If they are tied the CLASS category and then
+      the TYPE category are compared.  If there is still a tie, the declaration that was declared last (further down) in the stylesheet
+      is chosen. Some exceptions are inline styles and special overrides.
+      `,
+      },
+      { h3: `ID` },
+      {
+        p: `Includes only ID selectors such as #example. For each matching selector, add 1-0-0 to the weight value.`,
+      },
+      { h3: `CLASS` },
+      {
+        p: `Includes class selectors such as .myClass, attribute selectors [type='radio'] and pseudo-classes :hover. For each matching selector, add 0-1-0 to the weight value.`,
+      },
+      { h3: `TYPE` },
+      {
+        p: `Includes type selectors such as h1, body, etc. and pseudo elements like ::before.  For each matching selector, add 0-0-1 to the weight value.`,
+      },
+      { h3: `Inline Styles` },
+      {
+        p: `These styles overwrite any normal styles in stylesheets and are essentially consisdered 1-0-0-0`,
+      },
+      { h3: `Override Styles` },
+      {
+        p: `One may override styles by using !important, but it is considered a bad practice and not recommended.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `h1 {
+  property: value !important;
+}`,
+        },
+      },
+      { link: `https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity` },
+    ],
+    [
       { h2: "Select Everything" },
       {
         p: `Selects every html element. Not recommended unless being used for CSS resets of browser defaults.`,
@@ -106,10 +146,11 @@ export const pageData = {
       {
         p: `Selectors can be combined to select elements based on their location in the DOM.`,
       },
+      { h3: "Descendent Combinator" },
       {
-        p: `Descendent Combinator - Selects all elements matching the second selector that are descendents
-          of the previous selector, does not necessarily have be a direct child but can be many layers of 
-          inheritance down.`,
+        p: `Selects all elements matching the second selector that are descendents
+        of the previous selector, does not necessarily have be a direct child but can be many layers of 
+        inheritance down.`,
       },
       {
         code: {
@@ -119,8 +160,9 @@ export const pageData = {
 }`,
         },
       },
+      { h3: "Child Combinator" },
       {
-        p: `Child Combinator - Selects all elements matching the second selector that are direct children of the previous selector.`,
+        p: `Selects all elements matching the second selector that are direct children of the previous selector.`,
       },
       {
         code: {
@@ -130,8 +172,9 @@ export const pageData = {
 }`,
         },
       },
+      { h3: "Sibling Combinator" },
       {
-        p: `Sibling Combinator - Selects all elements matching the second selector that are siblings (sharing the same parent) of the first selector and appear AFTER the first instance of the first selector.`,
+        p: `Selects all elements matching the second selector that are siblings (sharing the same parent) of the first selector and appear AFTER the first instance of the first selector.`,
       },
       {
         code: {
@@ -141,8 +184,9 @@ export const pageData = {
 }`,
         },
       },
+      { h3: "Adjacent Sibling Combinator" },
       {
-        p: `Adjacent Sibling Combinator - Selects all elements matching the second selector and have the first selector directly before them in the DOM.`,
+        p: `Selects all elements matching the second selector and have the first selector directly before them in the DOM.`,
       },
       {
         code: {

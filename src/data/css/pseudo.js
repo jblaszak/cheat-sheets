@@ -4,7 +4,7 @@ export const pageData = {
   cheats: [
     [
       {
-        h1: "Pseudo Classes",
+        h2: "Pseudo Classes",
       },
       {
         p: `These are used to select based on the current state of an element.  All begin with ':' and then the state they select for.`,
@@ -18,7 +18,7 @@ export const pageData = {
     ],
     [
       {
-        h2: `Links`,
+        h3: `Links`,
       },
       {
         p: `Matching links that have not been visited, links that have been visited, and both!`,
@@ -50,7 +50,10 @@ export const pageData = {
     ],
     [
       {
-        h2: `User actions - matching elements that are interacted with the user by some way. `,
+        h3: `User actions`,
+      },
+      {
+        p: `These match elements that are interacted with the user by some way.`,
       },
       {
         p: `Selected when element is hovered over by the mouse.`,
@@ -91,7 +94,7 @@ export const pageData = {
     ],
     [
       {
-        h2: `Form Elements`,
+        h3: `Form Elements`,
       },
       {
         p: `Disabled - `,

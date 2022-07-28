@@ -2,82 +2,82 @@ export const pageData = {
   pageTitle: "Markdown",
   pageInfo: ``,
   cheats: [
-    {
-      title: "Headings",
-      items: [
-        {
+    [
+      { h2: "Headings" },
+      {
+        code: {
           language: "markdown",
-          data: `# Heading 1
+          code: `# Heading 1
 ## Heading 2
 ...
 ###### Heading 6 (max)`,
         },
-      ],
-    },
-    {
-      title: "Italic Text",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Italic Text" },
+      {
+        code: {
           language: "markdown",
-          data: `Text in _italic_!`,
+          code: `Text in _italic_!`,
         },
-      ],
-    },
-    {
-      title: "Bold Text",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Bold Text" },
+      {
+        code: {
           language: "markdown",
-          data: `Text in **bold**!`,
+          code: `Text in **bold**!`,
         },
-      ],
-    },
-    {
-      title: "Inline Links",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Inline Links" },
+      {
+        code: {
           language: "markdown",
-          data: `[Link text!](www.linktarget.com)`,
+          code: `[Link text!](www.linktarget.com)`,
         },
-      ],
-    },
-    {
-      title: "Reference Links",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Reference Links" },
+      {
+        code: {
           language: "markdown",
-          data: `Just some text. [Some link text].
+          code: `Just some text. [Some link text].
 
 [Some link text]: www.linktarget.com`,
         },
-      ],
-    },
-    {
-      title: "Images",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Images" },
+      {
+        code: {
           language: "markdown",
-          data: `![Image Alt Text](www.imagelocation.com)`,
+          code: `![Image Alt Text](www.imagelocation.com)`,
         },
-      ],
-    },
-    {
-      title: "Image Reference w/ Alt Text (optional)",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Image Reference w/ Alt Text (optional)" },
+      {
+        code: {
           language: "markdown",
-          data: `![Image Reference Name][Image Alt Text]
+          code: `![Image Reference Name][Image Alt Text]
 
 [Image Reference Name]: www.imagelocation.com`,
         },
-      ],
-    },
-    {
-      title: "Block Quotes",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Block Quotes" },
+      {
+        code: {
           language: "markdown",
-          data: `Just some text.
+          code: `Just some text.
 
 >Some block quoted text!
 
@@ -87,124 +87,113 @@ export const pageData = {
 >
 >Together`,
         },
-      ],
-    },
-    {
-      title: "Unordered List",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Unordered List" },
+      {
+        code: {
           language: "markdown",
-          data: `* Unordered List Item 1
+          code: `* Unordered List Item 1
 * Unordered List Item 2`,
         },
-      ],
-    },
-    {
-      title: "Ordered List",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Ordered List" },
+      {
+        code: {
           language: "markdown",
-          data: `1. Ordered List Item 1
+          code: `1. Ordered List Item 1
 2. Ordered List Item 2`,
         },
-      ],
-    },
-    {
-      title: "Sub Lists",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Sub Lists" },
+      {
+        code: {
           language: "markdown",
-          data: `* Main List
+          code: `* Main List
  * Sub List`,
         },
-      ],
-    },
-    {
-      title: "Multiple Lines in List Section",
-      items: [
-        {
-          data: `Try using soft breaks and hard breaks to change up positioning of text.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Multiple Lines in List Section" },
+      {
+        p: `Try using soft breaks and hard breaks to change up positioning of text.`,
+      },
+      {
+        code: {
           language: "markdown",
-          data: `* List Text
+          code: `* List Text
   Text here continues at end of line above.
 
   Text at same indentation at line below.`,
         },
-      ],
-    },
-    {
-      title: "Paragraphs",
-      items: [
-        {
-          data: `Markdown handles spaces differently. Two types of line breaks, hard break and soft break.
-                  Hard break creates a space between sections of text. Soft break puts text on next line.`,
-        },
-      ],
-    },
-    {
-      title: "Hard Break",
-      items: [
-        {
-          data: `Use empty line to create hard break.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Paragraphs" },
+      {
+        p: `Markdown handles spaces differently. Two types of line breaks, hard break and soft break. Hard break creates a space between sections of text. Soft break puts text on next line.`,
+      },
+      { h3: "Hard Break" },
+      { p: `Use empty line to create hard break.` },
+      {
+        code: {
           language: "markdown",
-          data: `Some text on a line.
-
+          code: `Some text on a line.
+  
 Some text now in a different paragraph.`,
         },
-      ],
-    },
-    {
-      title: "Soft Break",
-      items: [
-        {
-          data: `Use two empty spaces '  ' to create soft break.`,
-        },
-        {
+      },
+      { h3: "Soft Break" },
+      { p: `Use two empty spaces '  ' to create soft break.` },
+      {
+        code: {
           language: "markdown",
-          data: `Some text in a line.  
+          code: `Some text in a line.  
 Some text now on line below.`,
         },
-      ],
-    },
-    {
-      title: "Code Snippet",
-      items: [
-        {
+      },
+    ],
+    [
+      { h2: "Code Snippet" },
+      {
+        code: {
           language: "markdown",
-          data: `${"```"}
+          code: `${"```"}
 <html>
 </html>
 ${"```"}`,
         },
-      ],
-    },
-    {
-      title: "Heading IDs",
-      items: [
-        {
-          data: `Part of extended markdown, may not work with all markdown processors.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Heading IDs" },
+      {
+        p: `Part of extended markdown, may not work with all markdown processors.`,
+      },
+      {
+        code: {
           language: "markdown",
-          data: `### Some heading {#heading-id}`,
+          code: `### Some heading {#heading-id}`,
         },
-      ],
-    },
-    {
-      title: "Linking to Heading ID",
-      items: [
-        {
-          data: `Part of extended markdown, may not work with all markdown processors.`,
-        },
-        {
+      },
+    ],
+    [
+      { h2: "Linking to Heading ID" },
+      {
+        p: `Part of extended markdown, may not work with all markdown processors.`,
+      },
+      {
+        code: {
           language: "markdown",
-          data: `[Heading ID Text](#heading-id)`,
+          code: `[Heading ID Text](#heading-id)`,
         },
-      ],
-    },
+      },
+    ],
   ],
 }

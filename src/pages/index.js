@@ -22,6 +22,7 @@ const IndexPage = () => {
       categoryTitle: "CSS",
       articles: [
         { title: "CSS Basics", path: "/css/basics" },
+        { title: "CSS Selectors", path: "/css/selectors" },
         { title: "Pseudo Classes & Elements", path: "/css/pseudo" },
       ],
     },

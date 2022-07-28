@@ -28,6 +28,22 @@ const Cheat = ({ items }) => {
       element: data => <a href={data}>{data}</a>,
     },
     {
+      itemType: /^definitionList$/,
+      element: data => {
+        return (
+          <ul>
+            {data.map(item => {
+              return (
+                <li>
+                  <strong>{item.title}</strong> - {item.definition}
+                </li>
+              )
+            })}
+          </ul>
+        )
+      },
+    },
+    {
       itemType: /^(.*)$/,
       element: () => <p>CHEAT TYPE NOT RECOGNIZED! CHECK DATA!</p>,
     },

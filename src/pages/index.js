@@ -28,6 +28,7 @@ const IndexPage = () => {
           title: "Display, Position & Float",
           path: "/css/display-position-float",
         },
+        { title: "Box Model & Sizing", path: "/css/box-model-sizing" },
       ],
     },
     {

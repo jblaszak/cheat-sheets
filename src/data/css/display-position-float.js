@@ -179,5 +179,30 @@ float: both;`,
         },
       },
     ],
+    [
+      { h2: "Stacking Context" },
+      {
+        p: `The stacking context is a 3D conceptualization of elements along an imaginary z-axis relative to the user, who is
+        assumed to be facing the viewport (webpage). New stacking contexts are created by certain properties being set to certain values
+        check the docs for a full list or properties.  Also a good visual aid to see what is meant. Within a stacking context, elements are arranged with items having a higher z-index on top. Stacking
+        contexts can be contained within other stacking contexts and form a hierarchy.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `position: fixed;
+position: sticky;
+
+h1 {
+  position: absolute;
+  position: relative;
+  z-index: 5;
+}`,
+        },
+      },
+      {
+        link: `https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context`,
+      },
+    ],
   ],
 }

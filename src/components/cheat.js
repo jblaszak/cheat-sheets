@@ -5,27 +5,47 @@ const Cheat = ({ items }) => {
   const itemTypes = [
     {
       itemType: /^h1$/,
-      element: data => <h1>{data}</h1>,
+      element: data => (
+        <h1 id={data} key={data}>
+          {data}
+        </h1>
+      ),
     },
     {
       itemType: /^h2$/,
-      element: data => <h2>{data}</h2>,
+      element: data => (
+        <h2 id={data} key={data}>
+          {data}
+        </h2>
+      ),
     },
     {
       itemType: /^h3$/,
-      element: data => <h3>{data}</h3>,
+      element: data => (
+        <h3 id={data} key={data}>
+          {data}
+        </h3>
+      ),
     },
     {
       itemType: /^p$/,
-      element: data => <p>{data}</p>,
+      element: data => <p key={data.slice(0, 32)}>{data}</p>,
     },
     {
       itemType: /^code$/,
-      element: data => <Code language={data.language}>{data.code}</Code>,
+      element: data => (
+        <Code language={data.language} key={data.code.slice(0, 64)}>
+          {data.code}
+        </Code>
+      ),
     },
     {
       itemType: /^link$/,
-      element: data => <a href={data}>{data}</a>,
+      element: data => (
+        <a href={data} key={data}>
+          {data}
+        </a>
+      ),
     },
     {
       itemType: /^definitionList$/,
@@ -34,7 +54,7 @@ const Cheat = ({ items }) => {
           <ul>
             {data.map(item => {
               return (
-                <li>
+                <li key={item.title}>
                   <strong>{item.title}</strong> - {item.definition}
                 </li>
               )

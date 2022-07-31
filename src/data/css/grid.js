@@ -132,18 +132,6 @@ justify-items: stretch;`,
         },
       },
     ],
-    [
-      { h3: "Align Items" },
-      {
-        p: `Sets the alignment for grid items within their COLUMNS. NOTE: also makes the item fit the size of the content. Same properties availble as justify-items.`,
-      },
-      {
-        code: {
-          language: `css`,
-          code: `align-items: start;`,
-        },
-      },
-    ],
     [{ h2: "Grid Item Properties" }],
     [
       { h3: "Grid Column" },

@@ -1,6 +1,6 @@
 export const pageData = {
-  pageTitle: "CSS Units, Colors, Variables",
-  pageInfo: `CSS Units are used to describe the sizing of elements relative to certain properties.`,
+  pageTitle: "CSS Units, Colors & Gradients",
+  pageInfo: `CSS Units are used to describe the sizing of elements relative to certain properties. Colors and gradients can be represented in a number of ways.`,
   cheats: [
     [{ h2: "Units" }],
     [

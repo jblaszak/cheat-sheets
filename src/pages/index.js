@@ -28,7 +28,13 @@ const IndexPage = () => {
           title: "Display, Position & Float",
           path: "/css/display-position-float",
         },
+        {
+          title: "Units, Colors & Gradients",
+          path: "/css/units-colors-gradients",
+        },
         { title: "Box Model & Sizing", path: "/css/box-model-sizing" },
+        { title: "Flexbox", path: "/css/flexbox" },
+        { title: "CSS Grid", path: "/css/grid" },
       ],
     },
     {

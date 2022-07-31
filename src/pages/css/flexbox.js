@@ -1,9 +1,9 @@
 import * as React from "react"
 import CheatPage from "../../template/cheatPage"
-import { pageData } from "../../data/css/units"
+import { pageData } from "../../data/css/flexbox"
 
-const CSSUnitsPage = () => {
+const CSSFlexboxPage = () => {
   return <CheatPage pageData={pageData} />
 }
 
-export default CSSUnitsPage
+export default CSSFlexboxPage

@@ -35,6 +35,7 @@ const IndexPage = () => {
         { title: "Box Model & Sizing", path: "/css/box-model-sizing" },
         { title: "Flexbox", path: "/css/flexbox" },
         { title: "CSS Grid", path: "/css/grid" },
+        { title: "Images", path: "/css/images" },
       ],
     },
     {

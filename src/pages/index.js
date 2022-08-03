@@ -36,6 +36,7 @@ const IndexPage = () => {
         { title: "Flexbox", path: "/css/flexbox" },
         { title: "CSS Grid", path: "/css/grid" },
         { title: "Images", path: "/css/images" },
+        { title: "Inheritance", path: "/css/inheritance" },
       ],
     },
     {

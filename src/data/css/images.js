@@ -43,13 +43,13 @@ export const pageData = {
         code: {
           language: "css",
           code: `main {
-                    background-image: url('myImage.png');
-                    background-clip: padding-box;
-                    background-origin: padding-box;
-                    background-repeat: no-repeat;
-                    background-size: 50% auto;
-                    background-position: -100px -200px;
-                }`,
+    background-image: url('myImage.png');
+    background-clip: padding-box;
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    background-position: -100px -200px;
+}`,
         },
       },
     ],

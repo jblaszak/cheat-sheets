@@ -37,6 +37,7 @@ const IndexPage = () => {
         { title: "CSS Grid", path: "/css/grid" },
         { title: "Images", path: "/css/images" },
         { title: "Inheritance", path: "/css/inheritance" },
+        { title: "Responsive Designs", path: "/css/responsive-designs" },
       ],
     },
     {

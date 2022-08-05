@@ -31,7 +31,7 @@ export const pageData = {
     [
       { h2: "Accessing Element Attribute Values" },
       {
-        p: `Can be used to dynamically change your CSS using javascript by pulling the value from the attribute on the element. Three options to use it: simple, with a type, and with a fallback!`,
+        p: `Can be used to dynamically change your CSS using javascript by pulling the value from the attribute on the element. Note: may be easier to just use something like SCSS or SASS for this. Three options to use it: simple, with a type, and with a fallback!`,
       },
       {
         code: {
@@ -49,6 +49,7 @@ export const pageData = {
 }`,
         },
       },
+      { link: `https://developer.mozilla.org/en-US/docs/Web/CSS/attr` },
     ],
   ],
 }

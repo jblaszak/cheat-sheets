@@ -129,5 +129,52 @@ color: hsla(30.2 100% 50% / 60%);`,
         },
       },
     ],
+    [
+      { h2: `Gradients` },
+      {
+        p: `Gradients are used to create smooth transitions between two or more colors.`,
+      },
+      { link: `https://cssgradient.io/` },
+    ],
+    [
+      { h3: `Linear Gradients` },
+      {
+        p: `Creates a gradual transition between colors from top to bottom if no angle set (default angle 180 degrees). Can change the angle of the gradient and number/position of the colors.
+      Can also repeat gradient after a given amount.`,
+      },
+      {
+        code: {
+          language: "CSS",
+          code: `background: linear-gradient(angle, color start-percentage, color start-percentage, color start-percentage);
+background: linear-gradient(255deg, rgba(0,170,255,1) 0%, rgba(0,186,255,1) 40%, rgba(0,211,255,1) 100%);
+background: repeating-linear-gradient(red, green 50x);`,
+        },
+      },
+      {
+        link: `https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient`,
+      },
+    ],
+    ,
+    [
+      { h3: `Radial Gradients` },
+      {
+        p: `Creates a gradual transition between colors from the central point. Can declare size and position of circle/ellipse.
+      Like linear gradients, can also be repeating`,
+      },
+      {
+        code: {
+          language: "CSS",
+          code: `background: radial-gradient(farthest-corner at 40px 40px, #f35 0%, #43e 100%);
+background: radial-gradient(circle at 40px 40px, #3f87a6, #ebf8e1, #f69d3c);
+background: radial-gradient(circle 40px, #3f87a6, #ebf8e1, #f69d3c);
+background: radial-gradient(ellipse at top, #e66465, transparent),
+background: radial-gradient(circle at bottom, #4d9f0c, transparent);
+background: repeating-radial-gradient(circle at 40px 40px, #3f87a6, #ebf8e1, #f69d3c 50px);`,
+        },
+      },
+      {
+        link: `https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient`,
+      },
+    ],
   ],
 }

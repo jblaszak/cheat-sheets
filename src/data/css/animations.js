@@ -86,7 +86,7 @@ transition-property: margin-right, color;`,
         code: {
           language: `css`,
           code: `/* property name | duration */
-            transition: margin-right 4s;
+transition: margin-right 4s;
             
 /* property name | duration | delay */
 transition: margin-right 4s 1s;
@@ -108,10 +108,144 @@ transition: all 0.5s ease-out;`,
     [
       { h2: "Animations" },
       {
-        p: `Used when more complicated animations are needed! Done by setting values at certain keyframes `,
+        p: `Used when more complicated animations are needed! Done by setting property values at specific points in time called keyframes (%'s).`,
       },
       {
-        link: `https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions`,
+        link: `https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes/`,
+      },
+      {
+        link: `https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations`,
+      },
+    ],
+    [
+      { h3: "Animation Name" },
+      {
+        p: `Sets which set of keyframes to use.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `animation-name: myKeyFrames;`,
+        },
+      },
+    ],
+    [
+      { h3: "Animation Duration" },
+      {
+        p: `Sets how long the animation should take`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `animation-duration: 1s;`,
+        },
+      },
+    ],
+    [
+      { h3: "Animation Fill Mode" },
+      {
+        p: `Sets if the animation stays in the final position at the end or return back to the starting position.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `animation-fill-mode: forwards;
+animation-fill-mode: backwards;
+animation-fill-mode: both;`,
+        },
+      },
+    ],
+    [
+      { h3: "Animation Direction" },
+      {
+        p: `Sets which order the animation plays the keyframes. Can alternate between normla and reverse.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `animation-direction: normal;
+animation-direction: reverse;
+animation-direction: alternate;
+animation-direction: alternate-reverse;`,
+        },
+      },
+    ],
+    [
+      { h3: "Animation Iteration Count" },
+      {
+        p: `Sets how many times to play the animation.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `animation-iteration-count: 1;
+animation-iteration-count: infinite;`,
+        },
+      },
+    ],
+    [
+      { h3: "Animation Play State" },
+      {
+        p: `Sets if hte animation is currently running or paused.  Useful for controlling animations with javascript.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `animation-play-state: running;
+animation-play-state: paused;`,
+        },
+      },
+    ],
+    [
+      { h3: "Animation Timing Function" },
+      {
+        p: `Sets an acceleration curve for how quickly the animation should transition between keyframes.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `animation-timing-function: ease;
+animation-timing-function: ease-in;
+animation-timing-function: ease-out;
+animation-timing-function: ease-in-out;
+animation-timing-function: linear;
+animation-timing-function: step-start;
+animation-timing-function: step-end;
+animation-timing-function: steps(6, end);
+animation-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);`,
+        },
+      },
+    ],
+    [
+      { h3: "Animation Delay" },
+      {
+        p: `How long to wait before starting the animation.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `animation-delay: 1s;`,
+        },
+      },
+    ],
+    [
+      { h3: "Animation Shorthand" },
+      {
+        p: `Shorthand for all animation properties.  First time value is duration, second is delay, all other properties the order doesn't matter.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `/* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+animation: 3s ease-in 1s 2 reverse both paused slidein;
+
+/* @keyframes name | duration | easing-function | delay */
+animation: slidein 3s linear 1s;
+
+/* @keyframes name | duration */
+animation: slidein 3s;`,
+        },
       },
     ],
   ],

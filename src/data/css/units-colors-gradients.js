@@ -154,7 +154,6 @@ background: repeating-linear-gradient(red, green 50x);`,
         link: `https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient`,
       },
     ],
-    ,
     [
       { h3: `Radial Gradients` },
       {

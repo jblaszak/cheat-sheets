@@ -38,6 +38,7 @@ const IndexPage = () => {
         { title: "Images", path: "/css/images" },
         { title: "Inheritance", path: "/css/inheritance" },
         { title: "Responsive Designs", path: "/css/responsive-designs" },
+        { title: "Animations", path: "/css/animations" },
       ],
     },
     {

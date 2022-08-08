@@ -42,9 +42,11 @@ const Cheat = ({ items }) => {
     {
       itemType: /^link$/,
       element: data => (
-        <a href={data} key={data}>
-          {data}
-        </a>
+        <p>
+          <a href={data} key={data}>
+            {data}
+          </a>
+        </p>
       ),
     },
     {

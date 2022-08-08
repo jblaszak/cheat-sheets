@@ -25,8 +25,8 @@ const IndexPage = () => {
         { title: "CSS Selectors", path: "/css/selectors" },
         { title: "Pseudo Classes & Elements", path: "/css/pseudo" },
         {
-          title: "Display, Position & Float",
-          path: "/css/display-position-float",
+          title: "Display & Positioning",
+          path: "/css/display-positioning",
         },
         {
           title: "Units, Colors & Gradients",

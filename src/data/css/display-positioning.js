@@ -204,5 +204,79 @@ h1 {
         link: `https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context`,
       },
     ],
+    [
+      { h2: "Transforms" },
+      {
+        p: `Modifies the coordinate space to change the shape and position of content without disrupting the document flow.`,
+      },
+      {
+        link: `https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms`,
+      },
+    ],
+    [
+      { h3: "Transform Origin" },
+      {
+        p: `Sets the position of the origin of the coordinate space.  Default is center of element.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `transform-origin: bottom;
+transform-origin: center;
+
+/* x-offset-keyword | y-offset | z-offset */
+transform-origin: left 5px -3px;`,
+        },
+      },
+    ],
+    [
+      { h3: "Transform" },
+      {
+        p: `Defines the transformation to apply: rotate, scale, skew, or translate. NOTE: For multiple transforms, since these transforms are
+        matrix transforms, when multiplied left to right, they are effectively applied in order from right to left!`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `transform: perspective(17px);
+transform: rotate(0.5turn);
+transform: rotate3d(1, 2.0, 3.0, 10deg);
+transform: rotateX(10deg);
+transform: rotateY(10deg);
+transform: rotateZ(10deg);
+transform: translate(12px, 50%);
+transform: translate3d(12px, 50%, 3em);
+transform: translateX(2em);
+transform: translateY(3in);
+transform: translateZ(2px);
+transform: scale(2, 0.5);
+transform: scale3d(2.5, 1.2, 0.3);
+transform: scaleX(2);
+transform: scaleY(0.5);
+transform: scaleZ(0.3);
+transform: skew(30deg, 20deg);
+transform: skewX(30deg);
+transform: skewY(1.07rad);
+
+/* Multiple function values */
+transform: translateX(10px) rotate(10deg) translateY(5px);
+transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);`,
+        },
+      },
+    ],
+    [
+      { h3: "Perspective" },
+      {
+        p: `When defining things in 3D, you need to add perspective. The perspective property determines the distance between
+        the z=0 plane and the user to give a 3D element some perspective.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `perspective: none;
+perspective: 80px;`,
+        },
+      },
+    ],
   ],
 }

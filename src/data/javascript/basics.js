@@ -175,20 +175,6 @@ Math.pow(10) // exponent to power of 10`,
         },
       },
     ],
-    [
-      { h2: `Arrays` },
-      {
-        p: `Arrays are lists of values in a specific order. Note: under the hood, arrays are javascript objects.`,
-      },
-      {
-        code: {
-          language: `javascript`,
-          code: `const arr = [1, 2, 3];  // assigning array
-arr[0]; // accessing 1st element of array
-arr.push(4); // adds element to end of array`,
-        },
-      },
-    ],
     [{ h2: `Strings` }, { p: `Strings are just sequences of characters!` }],
     [
       { h3: `String Usage` },

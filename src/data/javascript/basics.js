@@ -48,6 +48,55 @@ comment */`,
         },
       },
     ],
+    [{ h2: `Variables` }, { p: `Variables are used to store information.` }],
+    [
+      { h3: `Assigning Variables` },
+      {
+        code: {
+          language: `javascript`,
+          code: `console.log(myNum); // throws error because variable isn't assigned yet
+console.log(myNum3); // outputs undefined because 'var' variables initialize to undefined
+const myNum = 10; // constant that doesn't change
+let myNum2 = 12; // a variable that we expect to change later
+var myNum3 = 20; // a variable that has hoisting`,
+        },
+      },
+    ],
+    [
+      { h3: `Hoisting and Scoping` },
+      {
+        p: `Let and const variable declarations are only defined and accessible within (scoped to) the block of code (stuff between { } ) they are in.
+      These have 'block scope'. Must be assigned before being accessed. While var has function scope and can be accessed from anywhere inside the function it is in as
+      it is automatically assigned a default value of 'undefined' even before it is assigned! Usually best to use const/let.`,
+      },
+      {
+        code: {
+          language: `javascript`,
+          code: `
+console.log(varNum); // reference error
+
+function myFunc() {
+    console.log(letNum); // reference error thrown
+    console.log(varNum); // undefined
+    console.log(varNum2); // undefined
+    var varNum = 3;
+    if (true) {
+        let letNum = 1;
+        var varNum2 = 2;
+        const constNum = 4;
+        constNum = 2; // throws error
+        console.log(letNum); // 1
+        console.log(varNum2); // 2
+    };
+    console.log(letNum); // reference error thrown
+    console.log(varNum2); // 2
+    console.log(varNum); // 3
+};
+
+console.log(varNum); // reference error`,
+        },
+      },
+    ],
     [
       { h2: `Use Strict` },
       {

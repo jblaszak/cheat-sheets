@@ -45,14 +45,18 @@ const IndexPage = () => {
     {
       categoryTitle: "Javascript",
       articles: [
-        { title: "Basics", path: "/javascript/basics" },
         { title: "Arrays", path: "/javascript/arrays" },
+        { title: "Basics", path: "/javascript/basics" },
         { title: "Modern Javascript", path: "/javascript/modern" },
         { title: "Numbers & Math", path: "/javascript/numbers" },
         { title: "Objects", path: "/javascript/objects" },
         { title: "Strings", path: "/javascript/strings" },
         { title: "Symbols", path: "/javascript/symbols" },
       ],
+    },
+    {
+      categoryTitle: "Git",
+      articles: [{ title: "Git", path: "/git/git" }],
     },
     {
       categoryTitle: "Markdown",

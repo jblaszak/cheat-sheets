@@ -47,6 +47,8 @@ const IndexPage = () => {
       articles: [
         { title: "Basics", path: "/javascript/basics" },
         { title: "Arrays", path: "/javascript/arrays" },
+        { title: "Objects", path: "/javascript/objects" },
+        { title: "Symbols", path: "/javascript/symbols" },
       ],
     },
     {

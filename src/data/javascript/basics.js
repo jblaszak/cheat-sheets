@@ -217,39 +217,6 @@ str.split(',');  // returns an array of substrings split by ','`,
       },
     ],
     [
-      { h2: `Objects` },
-      {
-        p: `Objects are containers for key value pairs to make things easy to look up. Values can be of any type but keys
-      must be strings not starting with a number.`,
-      },
-    ],
-    [
-      { h3: `Object Usage` },
-      {
-        code: {
-          language: `javascript`,
-          code: `const person = {
-    name: 'Bob',
-    age: 10,
-}; // assigning an object
-
-const thisPersonsAge = person[age]; // accessing objects values by key
-const thisPersonsAge = person.age; // accessing object values by key
-person.age = 15; // changing values in object`,
-        },
-      },
-    ],
-    [
-      { h3: `Object Functions` },
-      {
-        code: {
-          language: `javascript`,
-          code: `JSON.stringify(person); // converts object to string
-JSON.parse(myString); // converts valid string into Javascript Object Notation (JSON) format`,
-        },
-      },
-    ],
-    [
       { h2: `Functions` },
       {
         p: `Functions are mini programs that take inputs (parameters) and return a value. Under the hood they are considered objects. `,
@@ -258,14 +225,14 @@ JSON.parse(myString); // converts valid string into Javascript Object Notation (
         code: {
           language: `javascript`,
           code: `function myFunction(parameter) {
-    return parameter + 1;
-}; // Creating a function
-
-myFunction = (parameter) => {
-    return parameter + 1;
-}; // Modern ES6 function creation
-
- myFunction(5); // Calling (using) a function`,
+      return parameter + 1;
+  }; // Creating a function
+  
+  myFunction = (parameter) => {
+      return parameter + 1;
+  }; // Modern ES6 function creation
+  
+   myFunction(5); // Calling (using) a function`,
         },
       },
       {
@@ -275,8 +242,8 @@ myFunction = (parameter) => {
         code: {
           language: `javascript`,
           code: `myArray.forEach(function(value) {
-    console.log(value);
-});`,
+      console.log(value);
+  });`,
         },
       },
     ],

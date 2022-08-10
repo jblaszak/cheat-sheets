@@ -1,16 +1,9 @@
 export const pageData = {
   pageTitle: "Javascript Arrays",
-  pageInfo: `Javascript is a multi-paradigm language that is dynamically typed! It's capable of declarative, event-driven,
-      functional, imperative, and object oriented paradigms!`,
+  pageInfo: `Arrays are lists of values in a specific order. Note: under the hood, arrays are javascript objects.`,
   cheats: [
     [
-      { h2: `Arrays` },
-      {
-        p: `Arrays are lists of values in a specific order. Note: under the hood, arrays are javascript objects.`,
-      },
-    ],
-    [
-      { h3: `Creating Arrays and Accessing Arrays` },
+      { h2: `Creating Arrays and Accessing Arrays` },
       {
         code: {
           language: `javascript`,
@@ -23,7 +16,7 @@ arr[0]; // accessing 1st element of array`,
       },
     ],
     [
-      { h3: `Adding/Removing Elements` },
+      { h2: `Adding/Removing Elements` },
       {
         code: {
           language: `javascript`,
@@ -36,7 +29,7 @@ arr.shift(); // removes and returns first element of array, also inefficient (0^
       },
     ],
     [
-      { h3: `Checking for Elements in Array` },
+      { h2: `Checking for Elements in Array` },
       {
         code: {
           language: `javascript`,
@@ -47,7 +40,7 @@ arr.lastIndexOf(3); // same as above but from last element`,
       },
     ],
     [
-      { h3: `Checking if Variable is Array` },
+      { h2: `Checking if Variable is Array` },
       {
         code: {
           language: `javascript`,
@@ -58,7 +51,7 @@ arr instanceof Array; // returns true if an array`,
       },
     ],
     [
-      { h3: `Deleting and Replacing Elements` },
+      { h2: `Deleting and Replacing Elements` },
       {
         code: {
           language: `javascript`,
@@ -73,7 +66,7 @@ arr.join(', '); // returns a string with ', ' between each array element`,
       },
     ],
     [
-      { h3: `Iterating Through Arrays` },
+      { h2: `Iterating Through Arrays` },
       {
         code: {
           language: `javascript`,
@@ -95,7 +88,7 @@ const mappedArray = arr.map(function(value, index) {
       },
     ],
     [
-      { h3: `Reducers` },
+      { h2: `Reducers` },
       {
         p: `Used to combine values in array and output the result. If no starting value, it uses the sets accumulator to
         the first element of the array.  'reduceRight' does same thing but starts from end of array and goes in reverse.`,
@@ -116,7 +109,7 @@ const sum = arr.reduce(function(accumulator, currentValue, index, array) {
       },
     ],
     [
-      { h3: `Sorting` },
+      { h2: `Sorting` },
       {
         p: `Used to sort elements in an array IN PLACE based on some criteria. Default function is to convert elements into strings and then
           sort alphabetically.  `,
@@ -140,7 +133,7 @@ arr.sort(function(firstNumber, secondNumber) {
     ],
 
     [
-      { h3: `Other Array Methods` },
+      { h2: `Other Array Methods` },
       {
         code: {
           language: `javascript`,

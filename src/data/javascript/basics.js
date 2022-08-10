@@ -133,86 +133,59 @@ console.trace(); // outputs the stack trace to show you what function you're in`
       },
     ],
     [
-      { h2: `Numbers and Math` },
+      { h2: `Equality and Type Coercion` },
       {
-        code: {
-          language: `javascript`,
-          code: `let number = 10;  // assigning integer
-let number = 10.8;  // assigning float
-let number = Infinity // infinity representation
-let number = BigInt(100) // 
-let number = 10 + 'a' // NaN (not a number)
-let number = 100n // same as BigInt above
-
-Number('10.8'); // Converting string to number
-parseInt('10.5px') // returns everything before the first non-number character (10)
-parseFloat('2.5rem') // same as above but returns the float number (2.5)
-
-// Math //
-number = number + 10; // addition
-number += 10 // addition shorthand
-number = number - 10; // subtraction
-number -= 10 // subtraction shorthand
-number = number * 10; // mutliplication
-number *= 10 // multiplication shorthand
-number = number / 10; // division
-number /= 10 // division shorthand
-number = number % 10; // remainder
-number %= 10; // remainder shorthand
-
-number < 10; // less than
-number <= 10; // less than or equal to
-number > 10; // greater than
-number >= 10; // greater than or equal to
-number == 10; // loose equality check, doesn't check type (i.e. string '10.0' matches number 10)
-number === 10; // strict equality, value and type must match 
-
-Math.round(number); // round to nearest whole number
-Math.floor(number); // round to lower whole number
-Math.ceiling(number); // round to upper whole number
-Math.random(); // returns random number between 0 and 1
-Math.pow(10) // exponent to power of 10`,
-        },
+        p: `There are two different types of equality, loose and strict. Loose only compares values by implicitly converting the types
+  (type coercion) and then comparing, while strict equality compares the type and values. Empty strings and arrays equate to false, 
+  but not objects! Objects and arrays do not compare contents, they compare pointer to object/array so return false unless comparison 
+  points to same object/array.`,
       },
-    ],
-    [{ h2: `Strings` }, { p: `Strings are just sequences of characters!` }],
-    [
-      { h3: `String Usage` },
       {
         code: {
           language: `javascript`,
-          code: `let str = 'myString';  // assigning a string
-str = str + 'moreString'; // concatenating strings
-str = str + 10; // gives 'myString10'
-str = 'mySpecialCharacter\\''; // special characters prefaced with '\\'
-str = 'myString \\n'; // creates new line after text
-str = \`\${myNumber + 22}\`; // template literal taking variable's value into string
-str = \`Multi-line
-template literal\`; // template literal doing multiple lines`,
-        },
-      },
-    ],
-    [
-      { h3: `String Functions` },
-      {
-        code: {
-          language: `javascript`,
-          code: `str[0]; // gives first character of string
-str.chartAt(0) // gives first character of string
-str.includes('word'); // checks if string has substring
-str.startsWith('a'); // checks if string starts with substring
-str.endsWith('z'); // checks if string ends with substring
-str.toUpperCase(); // converts string to uppercase
-str.toLowerCase(); // converts string to lowercase
-str.substr(1); // returns substring from index 1 to last index
-str.substr(1, 2); // returns substring from index 1 to 2
-str.slice(1, 3); // returns substring from index 1 to 2 (not a typo)
-str.padStart(5, '-');  // puts '-' at start of string until string is 5 chars long
-str.padEnd(5, '-'); // same as padStart but for end of string
-str.trim(); // removes all white space from start and end
-str.trimStart(); // removes all white space from start
-str.trimEnd(); // removes all white space from end
-str.split(',');  // returns an array of substrings split by ','`,
+          code: `console.log(5 == '5'); // 'loose' equality, true
+console.log(5 === '5'); // 'strict equality, false
+
+console.log(Number('1')); // explicit type coercion
+
+console.log(Number(true)); // 1
+console.log(Number(false)); // 0
+console.log(Number('words')); // NaN
+
+console.log('' == false); true
+console.log('a" == true); false
+
+console.log(NaN == NaN) // false
+console.log(NaN == false) // false
+console.log(NaN == null) // false
+console.log(NaN == undefined) / false
+
+console.log(Boolean(0)) // false
+console.log(Boolean(1)) // true
+console.log(Boolean(10)) // true
+
+console.log(null == undefined) // true
+console.log(null === undefined) // false
+console.log(x == null); // useful for checking for null and undefined at once!
+console.log(null == 0) // false
+console.log(null == true) // false
+console.log(null == false) // false
+
+const arr = [];
+console.log(arr == []); // false
+console.log(arr === []); // false
+console.log(false == []); // true
+console.log(false === []); // false
+
+const obj = {};
+console.log({} == {}); // false
+console.log({} === {}); // false
+console.log({} == obj); // false
+console.log({} === obj); // false
+console.log(obj == obj); // true
+console.log(obj === obj); // true
+console.log(false == {}); // false
+console.log(false === {}); // false`,
         },
       },
     ],
@@ -225,14 +198,14 @@ str.split(',');  // returns an array of substrings split by ','`,
         code: {
           language: `javascript`,
           code: `function myFunction(parameter) {
-      return parameter + 1;
-  }; // Creating a function
-  
-  myFunction = (parameter) => {
-      return parameter + 1;
-  }; // Modern ES6 function creation
-  
-   myFunction(5); // Calling (using) a function`,
+    return parameter + 1;
+}; // Creating a function
+
+myFunction = (parameter) => {
+    return parameter + 1;
+}; // Modern ES6 function creation
+
+myFunction(5); // Calling (using) a function`,
         },
       },
       {
@@ -242,8 +215,8 @@ str.split(',');  // returns an array of substrings split by ','`,
         code: {
           language: `javascript`,
           code: `myArray.forEach(function(value) {
-      console.log(value);
-  });`,
+    console.log(value);
+});`,
         },
       },
     ],

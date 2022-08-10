@@ -36,6 +36,59 @@ export const pageData = {
       },
     ],
     [
+      { h2: `Connecting to HTML` },
+      {
+        code: {
+          language: `html`,
+          code: `<!DOCTYPE html>
+<html>
+  <head>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <button>Click me!</button>
+  </body>
+</html>`,
+        },
+      },
+      {
+        code: {
+          language: `javascript`,
+          code: `window.addEventListener('DOMContentLoaded', main); // waits for DOM tree to be constructed
+// OR
+window.addEventListener('load', main); // waits for images and css to be loaded
+
+function main() {
+  const button = document.querySelector('button');
+  button.addEventListener('click', setBackgroundColor);
+}
+
+function setBackgroundColor() {
+  document.body.style.backgroundColor = '000000';
+}`,
+        },
+      },
+      {
+        p: `RECOMMENDED WAY: don't create event listener in javascript and use html attributes.`,
+      },
+      {
+        code: {
+          language: `html`,
+          code: `<script src="script.js" defer></script>`,
+        },
+      },
+      {
+        p: `For loading in scripts that don't need the DOM loaded, like metrics tracking, use async attribute. Scripts may potentially finish loading
+      before the DOM.`,
+      },
+      {
+        code: {
+          language: `html`,
+          code: `<script src="script.js" async></script>`,
+        },
+      },
+    ],
+    [
       { h2: `Comments` },
       {
         code: {

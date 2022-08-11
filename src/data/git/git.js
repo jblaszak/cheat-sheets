@@ -28,7 +28,7 @@ git remote add origin <REMOTE_URL>
 git remote -v
 
 # Push the changes in your local repository to github
-git push origin main`,
+git push --set-upstream origin main`,
         },
       },
     ],

@@ -120,7 +120,7 @@ flex-wrap: wrap-reverse;`,
       {
         code: {
           language: `css`,
-          code: `flex-flow: row-wrap;`,
+          code: `flex-flow: row wrap;`,
         },
       },
     ],

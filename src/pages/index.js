@@ -47,6 +47,8 @@ const IndexPage = () => {
       articles: [
         { title: "Arrays", path: "/javascript/arrays" },
         { title: "Basics", path: "/javascript/basics" },
+        { title: "DOM Manipulation", path: "/javascript/dom-manipulation" },
+        { title: "Events", path: "/javascript/events" },
         { title: "Modern Javascript", path: "/javascript/modern" },
         { title: "Numbers & Math", path: "/javascript/numbers" },
         { title: "Objects", path: "/javascript/objects" },

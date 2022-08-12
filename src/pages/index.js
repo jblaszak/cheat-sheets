@@ -53,6 +53,7 @@ const IndexPage = () => {
         { title: "Numbers & Math", path: "/javascript/numbers" },
         { title: "Objects", path: "/javascript/objects" },
         { title: "Promises & Async/Await", path: "/javascript/promises-async" },
+        { title: "Requests", path: "/javascript/requests" },
         { title: "Strings", path: "/javascript/strings" },
         { title: "Symbols", path: "/javascript/symbols" },
       ],

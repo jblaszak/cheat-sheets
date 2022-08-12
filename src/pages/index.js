@@ -56,6 +56,7 @@ const IndexPage = () => {
         { title: "Requests", path: "/javascript/requests" },
         { title: "Strings", path: "/javascript/strings" },
         { title: "Symbols", path: "/javascript/symbols" },
+        { title: "Time & Timers", path: "/javascript/time" },
       ],
     },
     {

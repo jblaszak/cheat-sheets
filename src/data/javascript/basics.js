@@ -160,7 +160,8 @@ console.log(varNum); // reference error`,
     [
       { h2: `Use Strict` },
       {
-        p: `Useful for outputting to console if there are certain bugs like missing declarations. Though if using a framework like React, they will usually tell you anyway.`,
+        p: `Useful for outputting to console if there are certain bugs like missing declarations. Though if using a framework like React, they will usually tell you anyway.
+        NOTE: when using strict mode, 'this' is undefined for a standard function.`,
       },
       {
         code: {

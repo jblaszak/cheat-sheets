@@ -58,6 +58,7 @@ const IndexPage = () => {
         { title: "Strings", path: "/javascript/strings" },
         { title: "Symbols", path: "/javascript/symbols" },
         { title: "Time & Timers", path: "/javascript/time" },
+        { title: "This", path: "/javascript/this" },
       ],
     },
     {

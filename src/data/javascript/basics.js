@@ -118,6 +118,12 @@ var myNum3 = 20; // a variable that has hoisting`,
     [
       { h3: `Hoisting and Scoping` },
       {
+        p: `Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables, or classes 
+        to the top of their scope, prior to the execution of the code.  Hoisting allows functions to be safely used in code before they 
+        are declared.  Variable and class declarations are also hoisted, so they can be referenced before they are declared, but this can
+        cause weird errors.`,
+      },
+      {
         p: `Let and const variable declarations are only defined and accessible within (scoped to) the block of code (stuff between { } ) they are in.
       These have 'block scope'. Must be assigned before being accessed. While var has function scope and can be accessed from anywhere inside the function it is in as
       it is automatically assigned a default value of 'undefined' even before it is assigned! Usually best to use const/let.`,
@@ -149,6 +155,7 @@ function myFunc() {
 console.log(varNum); // reference error`,
         },
       },
+      { link: `https://developer.mozilla.org/en-US/docs/Glossary/Hoisting` },
     ],
     [
       { h2: `Use Strict` },

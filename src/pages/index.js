@@ -49,6 +49,7 @@ const IndexPage = () => {
         { title: "Basics", path: "/javascript/basics" },
         { title: "Classes", path: "/javascript/classes" },
         { title: "Closures", path: "/javascript/closures" },
+        { title: "Currying", path: "/javascript/currying" },
         { title: "DOM Manipulation", path: "/javascript/dom-manipulation" },
         { title: "Events", path: "/javascript/events" },
         { title: "Modern Javascript", path: "/javascript/modern" },

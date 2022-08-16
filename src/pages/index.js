@@ -70,6 +70,10 @@ const IndexPage = () => {
       ],
     },
     {
+      categoryTitle: "TypeScript",
+      articles: [{ title: "TypeScript", path: "/typescript/typescript" }],
+    },
+    {
       categoryTitle: "Git",
       articles: [{ title: "Git", path: "/git/git" }],
     },

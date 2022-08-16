@@ -58,5 +58,27 @@ export const pageData = {
         ],
       },
     ],
+    [
+      { h2: "Frameworks vs Libraries" },
+      {
+        definitionList: [
+          {
+            title: `Library`,
+            definition: `A collection of reusable function, "unopinionated". Your code calls the library.`,
+          },
+          {
+            title: `Framework`,
+            definition: `A provided structure for your code, "opinionated". The framework calls your code.`,
+          },
+        ],
+      },
+    ],
+    [
+      { h2: "Opionionated vs Un-Opinionated" },
+      {
+        p: `An opinionated framework only allows access to their data structures, is limiting and encourages the designer into 
+        doing this their way.`,
+      },
+    ],
   ],
 }

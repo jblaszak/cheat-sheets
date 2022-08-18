@@ -463,5 +463,23 @@ default:
         },
       },
     ],
+    [
+      { h2: `Debugger Access` },
+      {
+        p: `This will open up the debug console in Chrome Developer Tools. Supported differently by different browsers and may do nothing.`,
+      },
+      {
+        code: {
+          language: `javascript`,
+          code: `function myFunction() {
+    debugger; // opens up the debugger in the developer tools
+    const a = 1;
+    const b = '2';
+    const added = a+b;
+    return a + b;
+}`,
+        },
+      },
+    ],
   ],
 }

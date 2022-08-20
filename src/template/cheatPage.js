@@ -4,6 +4,7 @@ import { useLocation } from "@reach/router"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Cheat from "../components/cheat"
+import * as styles from "./cheatPage.module.css"
 
 // import * as styles from "../../components/index.module.css"
 
@@ -54,7 +55,7 @@ const Template = ({ pageData }) => {
           <h1>{pageData.pageTitle}</h1>
           {pageData.pageInfo ? <p>{pageData.pageInfo}</p> : null}
         </header>
-        <section>
+        <section className={styles.tableOfContents}>
           <h2>Table Of Contents</h2>
           <ul>{tableOfContents}</ul>
         </section>

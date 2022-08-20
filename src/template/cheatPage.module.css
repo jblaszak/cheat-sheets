@@ -1,0 +1,18 @@
+.tableOfContents {
+    margin: 1rem 0;
+}
+
+.tableOfContents ul {
+    padding-inline-start: 40px;
+    list-style: none;
+}
+
+.tableOfContents > ul {
+    padding-inline-start: 0px;
+}
+
+.tableOfContents > ul > li {
+    font-weight: 700;
+}
+
+

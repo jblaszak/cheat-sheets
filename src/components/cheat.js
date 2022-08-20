@@ -1,12 +1,13 @@
 import React from "react"
 import Code from "../components/code"
+import * as styles from "./cheat.module.css"
 
 const Cheat = ({ items }) => {
   const itemTypes = [
     {
       itemType: /^h1$/,
       element: data => (
-        <h1 id={data} key={data}>
+        <h1 className={styles.mainTitle} id={data} key={data}>
           {data}
         </h1>
       ),
@@ -14,7 +15,7 @@ const Cheat = ({ items }) => {
     {
       itemType: /^h2$/,
       element: data => (
-        <h2 id={data} key={data}>
+        <h2 className={styles.secondaryTitle} id={data} key={data}>
           {data}
         </h2>
       ),
@@ -72,7 +73,7 @@ const Cheat = ({ items }) => {
   ]
 
   return (
-    <section>
+    <section className={styles.cheatSection}>
       {items.map(item => {
         const itemIdentifier = Object.keys(item)[0]
         // Find element matching regex test

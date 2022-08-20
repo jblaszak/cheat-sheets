@@ -53,8 +53,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 html {
-  --color-heading: white;
-  --color-text: rgb(156, 214, 255);
+  --color-heading: rgb(228, 248, 255);
+  --color-text: rgb(187, 225, 253);
   --color-background: #141e2e;
   --color-background2: #1f2a37;
   --color-border: #374251;

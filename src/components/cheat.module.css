@@ -1,0 +1,21 @@
+p {
+    margin: 0.5rem 0;
+}
+
+h1, h2, h3 {
+    color: var(--color-heading);
+}
+
+.mainTitle {
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+.secondaryTitle {
+    margin: 1.25rem 0;
+    font-size: 1.5rem;
+}
+
+.cheatSection {
+    margin: 1.5rem 0;
+}

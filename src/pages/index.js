@@ -80,6 +80,10 @@ const IndexPage = () => {
           title: "Basic Concepts",
           path: "/data-structures-algorithms/basic-concepts",
         },
+        {
+          title: "Arrays",
+          path: "/data-structures-algorithms/arrays",
+        },
       ],
     },
     {

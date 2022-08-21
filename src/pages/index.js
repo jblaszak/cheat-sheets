@@ -74,6 +74,15 @@ const IndexPage = () => {
       articles: [{ title: "TypeScript", path: "/typescript/typescript" }],
     },
     {
+      categoryTitle: "Data Structures & Algorithms",
+      articles: [
+        {
+          title: "Basic Concepts",
+          path: "/data-structures-algorithms/basic-concepts",
+        },
+      ],
+    },
+    {
       categoryTitle: "Git",
       articles: [{ title: "Git", path: "/git/git" }],
     },

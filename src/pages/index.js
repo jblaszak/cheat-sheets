@@ -84,6 +84,10 @@ const IndexPage = () => {
           title: "Arrays",
           path: "/data-structures-algorithms/arrays",
         },
+        {
+          title: "Linked Lists",
+          path: "/data-structures-algorithms/linked-lists",
+        },
       ],
     },
     {

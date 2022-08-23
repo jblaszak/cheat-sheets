@@ -3,7 +3,7 @@ export const pageData = {
   pageInfo: `Arrays are a linear collection of data that can be accessed at numbered indicies starting at 0.`,
   cheats: [
     [
-      { h2: `Time Comlexity` },
+      { h2: `Time Complexity` },
       {
         p: `Arrays can be implemented statically or dynamically.  Static arrays have a fixed amount of memory allocated before
       storing the array values. If a new value needs to be added, the whole array must be copied and have extra memory allocated.

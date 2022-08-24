@@ -88,6 +88,10 @@ const IndexPage = () => {
           title: "Linked Lists",
           path: "/data-structures-algorithms/linked-lists",
         },
+        {
+          title: "Hash Tables",
+          path: "/data-structures-algorithms/hash-tables",
+        },
       ],
     },
     {

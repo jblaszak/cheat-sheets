@@ -96,6 +96,10 @@ const IndexPage = () => {
           title: "Stacks & Queues",
           path: "/data-structures-algorithms/stacks-queues",
         },
+        {
+          title: "Strings",
+          path: "/data-structures-algorithms/strings",
+        },
       ],
     },
     {

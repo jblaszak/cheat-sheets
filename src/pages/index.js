@@ -92,6 +92,10 @@ const IndexPage = () => {
           title: "Hash Tables",
           path: "/data-structures-algorithms/hash-tables",
         },
+        {
+          title: "Stacks & Queues",
+          path: "/data-structures-algorithms/stacks-queues",
+        },
       ],
     },
     {

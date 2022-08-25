@@ -104,6 +104,10 @@ const IndexPage = () => {
           title: "Graphs",
           path: "/data-structures-algorithms/graphs",
         },
+        {
+          title: "Trees",
+          path: "/data-structures-algorithms/trees",
+        },
       ],
     },
     {

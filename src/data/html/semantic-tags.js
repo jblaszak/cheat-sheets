@@ -88,6 +88,22 @@ export const pageData = {
       },
     ],
     [
+      { h2: "Picture" },
+      {
+        p: `Used to contain an image. Can be used to conditionally render content for different screen sizes!`,
+      },
+      {
+        code: {
+          language: "html",
+          code: `<picture>
+  <source media="(max-width: 609px)" srcset="./images/image-product-mobile.jpg" />
+  <source media="(min-width: 610px)" srcset="./images/image-product-desktop.jpg" />
+  <img class="card-image" alt="Gabrielle Essence Eau De Parfum" />
+</picture>`,
+        },
+      },
+    ],
+    [
       { h2: "Footer" },
       {
         p: `At the bottom of the page/area.  If used at bottom of page often has some navigation links or copyright information..`,

@@ -36,6 +36,7 @@ const IndexPage = () => {
         { title: "Pseudo Classes & Elements", path: "/css/pseudo" },
         { title: "Responsive Designs", path: "/css/responsive-designs" },
         { title: "Selectors", path: "/css/selectors" },
+        { title: "Shadows", path: "/css/shadows" },
         {
           title: "Units, Colors & Gradients",
           path: "/css/units-colors-gradients",

@@ -102,6 +102,18 @@ export const pageData = {
 </picture>`,
         },
       },
+      {
+        p: `Note: picture tag has a small whitespace below that can be removed with a CSS reset.`,
+      },
+      {
+        code: {
+          language: "css",
+          code: `img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}`,
+        },
+      },
     ],
     [
       { h2: "Footer" },

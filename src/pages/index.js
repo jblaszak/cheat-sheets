@@ -21,6 +21,7 @@ const IndexPage = () => {
     {
       categoryTitle: "CSS",
       articles: [
+        { title: "Accessibility", path: "/css/accessibility" },
         { title: "Animations", path: "/css/animations" },
         { title: "Basics", path: "/css/basics" },
         { title: "Box Model & Sizing", path: "/css/box-model-sizing" },

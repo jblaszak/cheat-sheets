@@ -155,7 +155,7 @@ scrollable.addEventListener('dragover', event => {
       {
         code: {
           language: `javascript`,
-          code: `scrollable.addEventListener('click', event => {
+          code: `scrollable.addEventListener('click', function (event) {
     if (event.target !== this) {
         event.target.textContent = 'Clicked';
     };

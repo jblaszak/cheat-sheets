@@ -266,6 +266,7 @@ body:not(div, p) {}
       {
         h3: "Creation Elements",
       },
+      { p: `NOTE: Before and After elements do NOT work on 'img' tags!` },
       {
         p: `Before - creates a pseudo element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.`,
       },

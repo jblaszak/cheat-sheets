@@ -198,5 +198,11 @@ flex-wrap: wrap-reverse;`,
         },
       },
     ],
+    [
+      { h2: "Caveats" },
+      {
+        p: `Items in a flex container are not subject to margin-collapsing.`,
+      },
+    ],
   ],
 }

@@ -142,5 +142,15 @@ font-display: fallback; /* hides text for 100ms, then uses fallback, if before 3
         },
       },
     ],
+    [
+      { h2: "Additional Notes" },
+      {
+        p: `Some fonts have a large descender (white space at bottom), may have to add padding on top to better align stuff.  There's a
+        more complicated way to deal with it for paragraphs of text.  Both methods will cause alignment issues if fallback font is loaded.`,
+      },
+      {
+        link: `https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align`,
+      },
+    ],
   ],
 }

@@ -51,5 +51,19 @@ export const pageData = {
       },
       { link: `https://developer.mozilla.org/en-US/docs/Web/CSS/attr` },
     ],
+    [
+      { h2: "Counters" },
+      {
+        p: `Used to count number of elements. Can be useful for styling things based on the number of total elements or styling custom lists.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `counter-reset: myCounter; /* initializes counter */
+counter-increment: myCounter; /* increases counter */
+content: counter(myCounter); /* uses counter */`,
+        },
+      },
+    ],
   ],
 }

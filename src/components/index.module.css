@@ -1,3 +1,21 @@
-.textCenter {
+.header {
   text-align: center;
+  margin: 2rem 0;
+}
+
+article {
+  column-count: 3;
+  column-gap: 2rem;
+}
+
+@media (max-width: 800px) {
+  article {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  article {
+    column-count: 1;
+  }
 }

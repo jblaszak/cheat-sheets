@@ -1,0 +1,12 @@
+.category {
+  margin: 1rem 0;
+}
+
+.category h1 {
+  font-size: 1.5rem;
+}
+
+.category ul {
+  list-style: none;
+  padding-left: 0;
+}

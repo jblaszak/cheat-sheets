@@ -1,9 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import * as styles from "./categories-list.module.css"
 
 const CategoriesList = ({ title, articles }) => {
   return (
-    <section>
+    <section className={styles.category}>
       <h1>{title}</h1>
       <ul>
         {articles.map(article => (

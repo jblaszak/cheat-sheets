@@ -132,7 +132,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Jo's Developer Cheat Sheet - Home" />
-      <header className={styles.textCenter}>
+      <header className={styles.header}>
         <h1>Welcome to Jo's Developer Cheat Sheet</h1>
       </header>
       <article>

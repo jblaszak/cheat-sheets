@@ -203,6 +203,9 @@ flex-wrap: wrap-reverse;`,
       {
         p: `Items in a flex container are not subject to margin-collapsing.`,
       },
+      {
+        p: `Justify-self does not work in a flex-container.`,
+      },
     ],
   ],
 }

@@ -75,7 +75,7 @@ html {
   --color-background: #141e2e;
   --color-background2: #1f2a37;
   --color-border: #374251;
-  --color-link: rgb(0, 149, 255);
+  --color-link: #1ba7fe;
 }
 
 body {
@@ -95,6 +95,7 @@ body {
 main {
   flex: 1;
   margin: 0 auto;
+  padding: 1rem;
   max-width: 1000px;
 }
 
@@ -111,13 +112,12 @@ footer a {
   margin-left: 1ch;
 }
 
-a,
-a:visited {
+a:any-link {
   text-decoration: none;
   color: var(--color-link);
 }
 
 a:hover {
-  text-decoration: underline;
-  color: var(--color-link);
+  text-decoration: none;
+  color: white;
 }

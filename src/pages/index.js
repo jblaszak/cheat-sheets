@@ -135,7 +135,7 @@ const IndexPage = () => {
       <header className={styles.header}>
         <h1>Welcome to Jo's Developer Cheat Sheet</h1>
       </header>
-      <article>
+      <article className={styles.mainArticle}>
         {categoryData.map(category => (
           <CategoriesList
             key={category.categoryTitle}

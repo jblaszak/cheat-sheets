@@ -3,19 +3,19 @@
   margin: 2rem 0;
 }
 
-article {
+.mainArticle {
   column-count: 3;
   column-gap: 2rem;
 }
 
 @media (max-width: 800px) {
-  article {
+  .mainArticle {
     column-count: 2;
   }
 }
 
 @media (max-width: 500px) {
-  article {
+  .mainArticle {
     column-count: 1;
   }
 }

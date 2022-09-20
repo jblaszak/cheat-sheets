@@ -34,6 +34,22 @@ export const pageData = {
         p: `Can be used to dynamically change your CSS using javascript by pulling the value from the attribute on the element. Note: may be easier to just use something like SCSS or SASS for this. Three options to use it: simple, with a type, and with a fallback!`,
       },
       {
+        p: `NOTE: only works for 'content' property at the moment.`,
+      },
+      {
+        code: {
+          language: `css`,
+          code: `blockquote::after {
+            display: block;
+      content: ' (source: ' attr(cite) ') ';
+      color: hotpink;
+    }`,
+        },
+      },
+      {
+        p: `Expected future use...`,
+      },
+      {
         code: {
           language: `html`,
           code: `<p data-color="blue">My text here!</p>`,

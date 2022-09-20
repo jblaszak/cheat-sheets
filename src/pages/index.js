@@ -42,6 +42,10 @@ const IndexPage = () => {
           title: "Units, Colors & Gradients",
           path: "/css/units-colors-gradients",
         },
+        {
+          title: "Variables",
+          path: "/css/variables",
+        },
       ],
     },
     {

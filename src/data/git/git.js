@@ -92,6 +92,15 @@ git add . // adds all changed files in directory and sub-directories`,
       },
     ],
     [
+      { h2: `Revert a Previous Commit` },
+      {
+        code: {
+          language: `bash`,
+          code: `git reset --soft HEAD~1`,
+        },
+      },
+    ],
+    [
       { h2: `Moving Changes From Local to Remote Repository` },
       {
         code: {

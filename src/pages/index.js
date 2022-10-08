@@ -80,6 +80,10 @@ const IndexPage = () => {
       articles: [{ title: "TypeScript", path: "/typescript/typescript" }],
     },
     {
+      categoryTitle: "React",
+      articles: [{ title: "Basics", path: "/react/basics" }],
+    },
+    {
       categoryTitle: "Data Structures & Algorithms",
       articles: [
         {

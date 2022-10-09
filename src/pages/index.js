@@ -81,7 +81,11 @@ const IndexPage = () => {
     },
     {
       categoryTitle: "React",
-      articles: [{ title: "Basics", path: "/react/basics" }],
+      articles: [
+        { title: "Basics", path: "/react/basics" },
+        { title: "Events", path: "/react/events" },
+        { title: "State", path: "/react/state" },
+      ],
     },
     {
       categoryTitle: "Data Structures & Algorithms",

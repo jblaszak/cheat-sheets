@@ -209,5 +209,70 @@ return (
         },
       },
     ],
+    [
+      { h2: "Props" },
+      {
+        p: "Props are used to assign properties to components and transfer data from the parent component to the child component.",
+      },
+    ],
+    [
+      { h3: `Assigning/Reading Props` },
+      {
+        code: {
+          language: `jsx`,
+          code: `export default function myApp() {
+    return (
+        <>
+        <MyComponent name="Foo" />
+        <MyComponent name="Bar" />
+        <MyComponent />
+        </>
+    )
+}
+
+function MyComponent(props) {
+    return <p>{props.name}</p>;
+},
+
+// OR, using destructuring
+function MyComponent({name = 'Bob'}) {
+    return <p>{name}</p>;
+}
+
+// OR (uncommonly)
+MyComponent.defaultProps = {
+    name: 'Bob',
+};`,
+        },
+      },
+    ],
+    [
+      { h3: `Passing Children to Props` },
+      {
+        p: `Anything between the open/closing tags of the component will get passed to the children props of the component.`,
+      },
+      {
+        code: {
+          language: `jsx`,
+          code: `export default function App() {
+    return (
+        <MyComponent name="Foo">
+            <p>Stuff in here!</p>
+            <p>More stuff here!</p>
+        </MyComponent>
+    );
+}
+
+function MyComponent({name, children}) {
+    return (
+        <div>
+            <p>{name}</p>
+            {children}
+        <div>
+    );
+}`,
+        },
+      },
+    ],
   ],
 }

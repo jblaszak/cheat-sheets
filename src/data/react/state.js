@@ -140,8 +140,8 @@ export default function MyComponent() {
     // the component!
     return (
         <>
-        <MyComponent count={count} setCount={setCount} />
-        <MyComponent count={count} setCount={setCount} />
+            <MyComponent count={count} setCount={setCount} />
+            <MyComponent count={count} setCount={setCount} />
         </>
     );
 }
@@ -149,9 +149,7 @@ export default function MyComponent() {
 function MyComponent({count, setCount}) {
     return (
         <>
-            <button onClick={setCount(count + 1)} >
-                Increment!
-            </button>
+            <button onClick={setCount(count + 1)}>Increment!</button>
             <p>Count: {count}</p>
         </>
     );
@@ -175,6 +173,65 @@ function MyComponent({count, setCount}) {
 }`,
         },
       },
+    ],
+    [
+      { h2: "Reducers" },
+      {
+        p: `If you have a complicated piece of state that needs to be changed in different ways, use a reducer. The useReducer hook
+        is initialized with a callback to a reducer function and an initial state object and returns a state and a dispatch function. The dispatch function can
+        used to pass values to the action portion of the reducer function that can be used to switch between various actions.`,
+      },
+      {
+        code: {
+          language: `javascript`,
+          code: `import { useReducer } from 'react';
+
+function reducer(state, action) {
+    switch (action.type) {
+        case 'increment':
+            return {count: state.count + action.num};
+        case 'decrement':
+            return {count: state.count - action.num};
+        default:
+            throw new Error('Unknown action type');
+}
+
+export default function MyInput() {
+    const [state, dispatch] = useReducer(reducer, {
+        count: 0,
+    });
+
+    return (
+        <>
+            <MyComponent 
+                count={state.count} 
+                setCount={() => dispatch({
+                    type: 'increment',
+                    num: 1,
+                })}
+            />
+            <MyComponent 
+                count={state.count} 
+                setCount={() => dispatch({
+                    type: 'increment',
+                    num: 10,
+                })}
+            />
+        </>
+    );
+}
+          
+function MyComponent({count, onClick}) {
+    return (
+        <>
+            <button onClick={onClick}>Increment!</button>
+            <p>Count: {count}</p>
+        </>
+    );
+}`,
+        },
+      },
+      { link: `https://reactjs.org/docs/hooks-reference.html#usereducer` },
     ],
   ],
 }

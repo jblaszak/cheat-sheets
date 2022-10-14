@@ -1,7 +1,7 @@
 export const pageData = {
   pageTitle: "React Context",
   pageInfo: `Context is used to pass value down the component tree without requiring passing the props through every component.
-    Super useful for global state management, like .`,
+    Super useful for global state management, like keeping track of authentication/user state across an app.`,
   cheats: [
     [
       { h2: "Creating Context" },

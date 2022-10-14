@@ -84,6 +84,7 @@ const IndexPage = () => {
       articles: [
         { title: "Basics", path: "/react/basics" },
         { title: "Component Lifecycle", path: "/react/component-lifecycle" },
+        { title: "Context", path: "/react/context" },
         { title: "Events", path: "/react/events" },
         { title: "Imperative React", path: "/react/imperative" },
         { title: "Refs", path: "/react/refs" },

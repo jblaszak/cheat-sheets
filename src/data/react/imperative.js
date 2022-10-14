@@ -48,6 +48,9 @@ return (
 )`,
         },
       },
+      {
+        link: `https://reactjs.org/docs/hooks-reference.html#useimperativehandle`,
+      },
     ],
   ],
 }

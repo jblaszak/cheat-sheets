@@ -98,7 +98,7 @@ export const pageData = {
       },
     ],
     [
-      { h3: "useLayoutEffect" },
+      { h2: "useLayoutEffect" },
       {
         p: `This will run the function passed to the hook synchronously. This means things will run slower so it's best to avoid it unless
         you really need to. In this case, it will NOT quickly flash '2' before going to '3'. If there is a longer process taking place using

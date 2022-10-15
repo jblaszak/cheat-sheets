@@ -10,7 +10,7 @@ export const pageData = {
       },
       {
         code: {
-          language: `jsx`,
+          language: `javascript`,
           code: `export default function MyComponent() {
     const handleClick = () => {
         console.log("clicked");
@@ -32,7 +32,7 @@ export const pageData = {
       },
       {
         code: {
-          language: `jsx`,
+          language: `javascript`,
           code: `export default function MyComponent() {
     return <MyComponent onClick={handleClick}>I am button! Click me!</MyComponent>;
 }

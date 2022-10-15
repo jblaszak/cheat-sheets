@@ -20,7 +20,7 @@ export const pageData = {
       },
       {
         code: {
-          language: `jsx`,
+          language: `javascript`,
           code: `const element = (
     <p id="my-paragraph">
         Hey <em>there!</em>
@@ -46,7 +46,7 @@ var element = React.createElement(
       },
       {
         code: {
-          language: `jsx`,
+          language: `javascript`,
           code: `<br />`,
         },
       },
@@ -56,7 +56,7 @@ var element = React.createElement(
       { p: `Package for inserting React elements into the DOM` },
       {
         code: {
-          language: `Javascript`,
+          language: `javascript`,
           code: `ReactDOM.render(element, DOMContainer);`,
         },
       },
@@ -68,7 +68,7 @@ var element = React.createElement(
       },
       {
         code: {
-          language: `jsx`,
+          language: `javascript`,
           code: `function MyComponent() {
     return (
         <p id="my-paragraph">
@@ -86,7 +86,7 @@ var element = React.createElement(
       },
       {
         code: {
-          language: `jsx`,
+          language: `javascript`,
           code: `return (
     <React.Fragment>
         <h1>Title</h1>
@@ -113,7 +113,7 @@ return (
       },
       {
         code: {
-          language: `jsx`,
+          language: `javascript`,
           code: `export default function myElement() {
     const myValue = 'stuff';
     return <p>Saying some {stuff}</p>;
@@ -129,7 +129,7 @@ return (
       },
       {
         code: {
-          language: `jsx`,
+          language: `javascript`,
           code: `export default function myElement() {
     const error = true;
 
@@ -174,7 +174,7 @@ return (
       },
       {
         code: {
-          language: `jsx`,
+          language: `javascript`,
           code: `export default function myElement() {
     const type = 'text';
     const props = {
@@ -198,7 +198,7 @@ return (
       { h2: "Inline Styles" },
       {
         code: {
-          language: `jsx`,
+          language: `javascript`,
           code: `export default function myElement() {
     return <p style={{
         color: 'red',
@@ -219,7 +219,7 @@ return (
       { h3: `Assigning/Reading Props` },
       {
         code: {
-          language: `jsx`,
+          language: `javascript`,
           code: `export default function myApp() {
     return (
         <>
@@ -253,7 +253,7 @@ MyComponent.defaultProps = {
       },
       {
         code: {
-          language: `jsx`,
+          language: `javascript`,
           code: `export default function App() {
     return (
         <MyComponent name="Foo">

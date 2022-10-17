@@ -86,6 +86,7 @@ const IndexPage = () => {
         { title: "Component Lifecycle", path: "/react/component-lifecycle" },
         { title: "Component Lists", path: "/react/component-lists" },
         { title: "Context", path: "/react/context" },
+        { title: "Custom Hooks", path: "/react/custom-hooks" },
         { title: "Events", path: "/react/events" },
         { title: "Imperative React", path: "/react/imperative" },
         { title: "Performance", path: "/react/performance" },

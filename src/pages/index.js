@@ -90,6 +90,7 @@ const IndexPage = () => {
         { title: "Events", path: "/react/events" },
         { title: "Imperative React", path: "/react/imperative" },
         { title: "Performance", path: "/react/performance" },
+        { title: "Portals", path: "/react/portals" },
         { title: "Refs", path: "/react/refs" },
         { title: "State", path: "/react/state" },
       ],

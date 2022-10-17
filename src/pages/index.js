@@ -92,6 +92,7 @@ const IndexPage = () => {
         { title: "Context", path: "/react/context" },
         { title: "Custom Hooks", path: "/react/custom-hooks" },
         { title: "Events", path: "/react/events" },
+        { title: "Error Handling", path: "/react/error-handling" },
         { title: "Imperative React", path: "/react/imperative" },
         { title: "Performance", path: "/react/performance" },
         { title: "Portals", path: "/react/portals" },

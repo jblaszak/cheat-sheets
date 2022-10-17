@@ -83,6 +83,10 @@ const IndexPage = () => {
       categoryTitle: "React",
       articles: [
         { title: "Basics", path: "/react/basics" },
+        {
+          title: "Class-Based Components",
+          path: "/react/class-based-components",
+        },
         { title: "Component Lifecycle", path: "/react/component-lifecycle" },
         { title: "Component Lists", path: "/react/component-lists" },
         { title: "Context", path: "/react/context" },

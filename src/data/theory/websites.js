@@ -91,10 +91,102 @@ export const pageData = {
       {
         p: `Used to establish connections between a client and server on the internet. Uses the IP address to open a TCP connection
         and sends data as packets. Establishes a connection using a three-way handshake (synchronization, synchronization acknowledgement,
-          and a final acknowledgement). Uses lots of error correction which increases latency and bandwidth.  `,
+          and a final acknowledgement). Uses lots of error correction which increases latency and bandwidth.`,
       },
       {
         link: `https://www.spiceworks.com/tech/networking/articles/tcp-vs-udp/`,
+      },
+    ],
+    [
+      { h2: "HTTP" },
+      {
+        p: `Hyper Text Transfer Protocol is a protocol for transmitting 'hypermedia' on the web.  It is stateless, which means that only one
+        message is sent at a time with no memory of previous requests, though cookies can be used to create sessions. These requests are usually
+        sent over TCP.`,
+      },
+    ],
+    [
+      { h2: `HTTP Requests` },
+      {
+        p: `HTTP Requests are used to ask a server to do something, typically CRUD operations (Create, Read, Update, Delete). A request is
+      composed of several parts: the request line and some headers.  The request line contains the method (GET, POST, etc.), a path, and an 
+      HTTP version number. There are many different types of headers that are used to give extra information to the server to help it process
+      the request. The minimum required are the host and accept headers.  Accept headers tell the server what type of response we are expecting.`,
+      },
+      { link: `https://en.wikipedia.org/wiki/List_of_HTTP_header_fields` },
+    ],
+    [
+      { h3: "GET Request" },
+      { p: `Used to get data.` },
+      {
+        code: {
+          language: `text/plain`,
+          code: `GET /mypage/mystuff HTTP/1.1
+        
+Host: www.mysite.com
+Accept: text/html`,
+        },
+      },
+    ],
+    [
+      { h3: "POST Request" },
+      {
+        p: `Used to send data to a server (in the body of the request), typically for storing in a database.`,
+      },
+      {
+        code: {
+          language: `text/plain`,
+          code: `POST /submit HTTP/1.1
+        
+Host: www.mysite.com
+Accept: application/json
+Content-Type: application/json
+
+{
+  "key1": value1,
+  "key2": value2,
+}`,
+        },
+      },
+    ],
+    [
+      { h2: "HTTP Responses" },
+      {
+        p: `This is what you get back from a server when you send it a request. It contains the version, the status code of the request,
+      and a status message.  Some headers are included as well as a body containing some data.`,
+      },
+      {
+        code: {
+          language: `text/plain`,
+          code: `HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+  ... rest of site
+</html>`,
+        },
+      },
+    ],
+    [
+      { h2: "Session Cookies as Headers" },
+      {
+        p: `Cookies are used to save data in the browser.  These can be sent back and forth from the client and server to keep
+      track of a user session. When this is done they are called session cookies.`,
+      },
+      { p: `Header for server setting a cookie` },
+      {
+        code: {
+          language: `text/plain`,
+          code: `Set-Cookie: auth-token:3435`,
+        },
+      },
+      { p: `Header for client sending cookie back` },
+      {
+        code: {
+          language: `text/plain`,
+          code: `Cookie: auth-token:3435`,
+        },
       },
     ],
   ],

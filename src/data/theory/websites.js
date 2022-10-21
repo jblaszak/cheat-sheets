@@ -116,6 +116,41 @@ export const pageData = {
       { link: `https://en.wikipedia.org/wiki/List_of_HTTP_header_fields` },
     ],
     [
+      { h2: `Request Methods` },
+      {
+        p: `Not an exhaustive list of the possible request methods, but contains some of the more common ones. The methods used depend on
+        the server and how they implement them.`,
+      },
+      {
+        definitionList: [
+          {
+            title: "GET",
+            definition: `Retrieves data from the server`,
+          },
+          {
+            title: "POST",
+            definition: `Submits data to the server`,
+          },
+          {
+            title: "PUT",
+            definition: `Replaces data on the server`,
+          },
+          {
+            title: "DELETE",
+            definition: `Deletes data on the server`,
+          },
+          {
+            title: "PATCH",
+            definition: `Partially updates data on the server`,
+          },
+          {
+            title: "HEAD",
+            definition: `Same as GET request but does not contain the body`,
+          },
+        ],
+      },
+    ],
+    [
       { h3: "GET Request" },
       { p: `Used to get data.` },
       {
@@ -169,6 +204,27 @@ Content-Type: text/html
       },
     ],
     [
+      { h3: "HTTP Response Codes" },
+      {
+        p: `Consists of 3 digits. 100-199 is informational (rarely used), 200-299 are success messages, 300-399 redirection message,
+        400-499 client error messages, 500-599 server side error messages.`,
+      },
+      {
+        definitionList: [
+          { title: "200", definition: "OK" },
+          { title: "201", definition: "Created" },
+          { title: "301", definition: "Moved Permanently" },
+          { title: "302", definition: "Found (Moved temporarily)" },
+          { title: "400", definition: "Bad Request" },
+          { title: "401", definition: "Unauthorized (Not Authenticated)" },
+          { title: "403", definition: "Forbidden" },
+          { title: "404", definition: "Not Found" },
+          { title: "500", definition: "Internal Server Error" },
+          { title: "503", definition: "Service Unavailable" },
+        ],
+      },
+    ],
+    [
       { h2: "Session Cookies as Headers" },
       {
         p: `Cookies are used to save data in the browser.  These can be sent back and forth from the client and server to keep
@@ -188,6 +244,14 @@ Content-Type: text/html
           code: `Cookie: auth-token:3435`,
         },
       },
+    ],
+    [
+      { h2: "HTTPS" },
+      {
+        p: `A more secure version of HTTP where there is end to end encryption use Transport Layer Security (TLS) (previously Secure Socket Layer - 
+          SSL), this means requests and responses are both encrypted.`,
+      },
+      { link: `https://www.cloudflare.com/learning/ssl/what-is-https` },
     ],
   ],
 }

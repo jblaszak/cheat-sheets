@@ -149,6 +149,7 @@ const IndexPage = () => {
     {
       categoryTitle: "Theory",
       articles: [
+        { title: "APIs", path: "/theory/apis" },
         { title: "Programming", path: "/theory/programming" },
         { title: "Websites", path: "/theory/websites" },
       ],

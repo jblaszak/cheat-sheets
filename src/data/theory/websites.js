@@ -253,5 +253,83 @@ Content-Type: text/html
       },
       { link: `https://www.cloudflare.com/learning/ssl/what-is-https` },
     ],
+    [
+      { h2: "Same-Origin Policy" },
+      {
+        p: `Prevents any scripts on the page from reading resources from different origins.  Only pages that have the same protocol, host and port
+        are considered to be from the same origin. Network requests can be sent cross-origin, but responses cannot be read from the other origin
+        because the browser will block it for safety reasons.`,
+      },
+    ],
+    [
+      { h2: "CSRF - Cross-Site Request Forgery Attacks" },
+      {
+        p: `When a request is sent to a server by an attacker and it able to convince the server that is was sent by the client. This can typically
+        be prevented using a CSRF token, which is a unique token given to the client that the forged request would not be able to replicate.  Also,
+        you can set the SameSite cookie flag on your cookies to strict (cookie is not sent cross-origin) or lax (same as strict, but sends cookies
+          when navigating to the site, this is the default behaviour in most modern browser)`,
+      },
+    ],
+    [
+      { h2: "CORS - Cross Origin Resource Sharing" },
+      {
+        p: `Sometimes cross origin requests are necessary. In order to get around the same-origin polify, a server can allow cross-origin requests
+        by including the 'Access-Control-Allow-Origin' header in the request.  Additionally 'Acces-Control-Allow-Credentials' can be used to 
+        indicate that credentials (cookies, TLS certificates, etc.) should be sent cross-origin. Sometimes the browser makes a preflight request
+        to check the required CORS headers using a special HTTP OPTIONS request.`,
+      },
+    ],
+    [
+      { h2: "XSS - Cross-Site Scripting" },
+      {
+        p: `Whenever attackers try to inject javascript code in a UI. Injected code is run from the origin of the vulnerable site. Several ways 
+        to do this:`,
+      },
+      {
+        definitionList: [
+          {
+            title: `persistent`,
+            definition: `Injected code persists through different sessions.  Typically when an attacker puts malicious code into your database. Typically
+      done when a comment with code is left where when it is appended to the page by the client it is executed.`,
+          },
+          {
+            title: `non-persistent`,
+            definition: `Injected code does not persist beyond one session.  Generally when an attacked uses how the client processes a URL query parameter
+      in order to execute malicious code on the client.`,
+          },
+          {
+            title: `DOM-based`,
+            definition: `Happens only on the frontend without any need to send data to the server.  Makes the attack harder to discover.`,
+          },
+        ],
+      },
+      {
+        p: `XSS can be prevented by always using textContent or innerText when adding dynamic text and avoiding innerHTML.  All inputs should be 
+      sanitized (properly escaped on the SERVER before being processed, otherwise client could send whatever they want) and httpOnly flag 
+      should be added to sensitive cookies.`,
+      },
+    ],
+    [
+      { h2: "window.opener" },
+      {
+        p: `A javascript property that describes the window object of the tab/window that opened the page.  This is vulnerable to attack in that
+        someone can change the window.location to a phishing site.  This can be prevented using the HTML attribute rel='noopener noreferrer'.
+        Noopener will set the window.opener to null, and noreferrer works same as noopener but also omits the referer HTTP header. (NOTE the 
+          difference in spelling between noreferrer and referer headers.)`,
+      },
+    ],
+    [
+      { h2: "OAuth - Open Authorization" },
+      {
+        p: `Services can use OAuth to give API access to other websites without passwords. Sends a token that can be used, typically a JWT.`,
+      },
+    ],
+    [
+      { h2: "JWT - JSON Web Token" },
+      {
+        p: `These tokens are signed, which means if the token is tampered with, the server will know.`,
+      },
+      { link: `http://jwt.io` },
+    ],
   ],
 }

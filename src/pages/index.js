@@ -147,6 +147,12 @@ const IndexPage = () => {
       articles: [{ title: "Markdown", path: "/markdown/markdown" }],
     },
     {
+      categoryTitle: "Systems Design",
+      articles: [
+        { title: "Systems Design", path: "/systems-design/systems-design" },
+      ],
+    },
+    {
       categoryTitle: "Theory",
       articles: [
         { title: "APIs", path: "/theory/apis" },

@@ -37,6 +37,57 @@ export const pageData = {
       },
     ],
     [
+      { h2: `How Browsers Render Content` },
+      { h3: `Critical Rendering Path` },
+      {
+        p: `1. Parse HTML into the DOM tree. Makes requests for any resources needed (images, scripts, stylesheets, etc.) If no async/defer is used 
+  on script it will block rendering until it is loaded.  2. Parse CSS and create a CSS Object Model (CSSOM) tree.  3. Combine DOM and CSSOM into
+  a render tree.  4. Calculates the layout (height, width, location) of all nodes based on the viewport sizes. 5. Paints the screen using the 
+  layout calculations and render tree.`,
+      },
+      { h3: `Dynamic Changes` },
+      {
+        p: `Depending on the change, the browser will need to repaint and recalculate more things, thus making certain changes less efficient.`,
+      },
+      {
+        definitionList: [
+          { title: `Color changes`, definition: `Only repaints node` },
+          {
+            title: `Position changes`,
+            definition: `Reflows and repaints the node and its siblings.`,
+          },
+          {
+            title: `Major changes`,
+            definition: `Reflow and repaint for the entire document. (ex. font change)`,
+          },
+        ],
+      },
+      { h3: `Key Performance Metrics` },
+      {
+        definitionList: [
+          {
+            title: `First Contentful Paint`,
+            definition: `First DOM elements painted`,
+          },
+          {
+            title: `First Meaningful Paint`,
+            definition: `First "meaningful" elements painted (user can understand something on the site)`,
+          },
+          {
+            title: `Time to Interactive`,
+            definition: `Time until the user inputs are responsive`,
+          },
+        ],
+      },
+      { h3: `Optimization for Critical Rendering Path` },
+      {
+        p: `1. Use defer/async scripts. 2. Minimize DOM size (don't use unnecessary divs)  3. Reduce files size (compression/minification). 4. 
+      Lazy loading - don't request everything at once. 5. Hardware accelerated animations. If animation is taking a long time you can add 
+      'transform: translate3D(0,0,0);' to the css.  Due to compositing, the animation will be handled by the GPU. DON'T overuse this, only if 
+      animation is running slow!`,
+      },
+    ],
+    [
       { h2: "Client-Server Model" },
       {
         p: `Most modern systems are designed using this paradigm where clients request data or service from a server and servers provide that data
@@ -253,8 +304,9 @@ Content-Type: text/html
       },
       { link: `https://www.cloudflare.com/learning/ssl/what-is-https` },
     ],
+    [{ h2: `Security` }],
     [
-      { h2: "Same-Origin Policy" },
+      { h3: "Same-Origin Policy" },
       {
         p: `Prevents any scripts on the page from reading resources from different origins.  Only pages that have the same protocol, host and port
         are considered to be from the same origin. Network requests can be sent cross-origin, but responses cannot be read from the other origin
@@ -262,7 +314,7 @@ Content-Type: text/html
       },
     ],
     [
-      { h2: "CSRF - Cross-Site Request Forgery Attacks" },
+      { h3: "CSRF - Cross-Site Request Forgery Attacks" },
       {
         p: `When a request is sent to a server by an attacker and it able to convince the server that is was sent by the client. This can typically
         be prevented using a CSRF token, which is a unique token given to the client that the forged request would not be able to replicate.  Also,
@@ -271,7 +323,7 @@ Content-Type: text/html
       },
     ],
     [
-      { h2: "CORS - Cross Origin Resource Sharing" },
+      { h3: "CORS - Cross Origin Resource Sharing" },
       {
         p: `Sometimes cross origin requests are necessary. In order to get around the same-origin polify, a server can allow cross-origin requests
         by including the 'Access-Control-Allow-Origin' header in the request.  Additionally 'Acces-Control-Allow-Credentials' can be used to 
@@ -280,7 +332,7 @@ Content-Type: text/html
       },
     ],
     [
-      { h2: "XSS - Cross-Site Scripting" },
+      { h3: "XSS - Cross-Site Scripting" },
       {
         p: `Whenever attackers try to inject javascript code in a UI. Injected code is run from the origin of the vulnerable site. Several ways 
         to do this:`,
@@ -310,7 +362,7 @@ Content-Type: text/html
       },
     ],
     [
-      { h2: "window.opener" },
+      { h3: "window.opener" },
       {
         p: `A javascript property that describes the window object of the tab/window that opened the page.  This is vulnerable to attack in that
         someone can change the window.location to a phishing site.  This can be prevented using the HTML attribute rel='noopener noreferrer'.
@@ -319,13 +371,13 @@ Content-Type: text/html
       },
     ],
     [
-      { h2: "OAuth - Open Authorization" },
+      { h3: "OAuth - Open Authorization" },
       {
         p: `Services can use OAuth to give API access to other websites without passwords. Sends a token that can be used, typically a JWT.`,
       },
     ],
     [
-      { h2: "JWT - JSON Web Token" },
+      { h3: "JWT - JSON Web Token" },
       {
         p: `These tokens are signed, which means if the token is tampered with, the server will know.`,
       },

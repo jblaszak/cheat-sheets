@@ -138,6 +138,13 @@ export const pageData = {
       },
     ],
     [
+      { h2: `IP Address` },
+      {
+        p: `The address given to a machine that is connected to the public internet. For an IPv4 address, the format is a.b.c.d where the letters
+      are numbers 0-255.  Special values are 127.0.0.1 for localhost (your own local machine) and 192.168.x.y for machines on your private network.`,
+      },
+    ],
+    [
       { h2: "TCP - Transmission Control Protocol" },
       {
         p: `Used to establish connections between a client and server on the internet. Uses the IP address to open a TCP connection

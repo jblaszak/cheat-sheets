@@ -139,8 +139,7 @@ console.log(weakSet.has(obj)); // true`,
     [
       { h2: "Linked List" },
       {
-        p: `Weak Set values can only be objects. Weak Map keys can only be objects.  Both hold 'weak' references to the objects,
-        meaning they do not prevent the objects from being garbage collected.  Neither can be iterated over.`,
+        p: `A linked list implementation in javascript.`,
       },
       {
         code: {
@@ -170,7 +169,7 @@ class LinkedList {
             return;
         }
         
-        while (curr != null && curr.next != null) {
+        while (curr.next != null) {
             curr = curr.next;
         }
         curr.next = node;

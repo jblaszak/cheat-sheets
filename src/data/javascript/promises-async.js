@@ -74,18 +74,23 @@ promise.then(val => val*2)
       {
         code: {
           language: `javascript`,
-          code: `promise.all([
+          code: `Promise.all([
     Promise.resolve(3),
     Promise.resolve(2),
 ]).then(console.log).catch(error => console.log(error)); // waits for all promises to finish before continuing
 // if any one throws error, immediately goes into catch block
 
-promise.race([
+const [val1, val2] = await Promise.all([
+  fetch(url1),
+  fetch(url2),
+]); // example usage inside async function
+
+Promise.race([
     new Promise((res,rej) => setTimeout(() => res(5), 1000)),
     new Promise((res,rej) => setTimeout(() => res(10), 2000)),
 ]).then(console.log); // first promise to resolve OR reject wins, '5' in this case
 
-promise.any([
+Promise.any([
     new Promise((res,rej) => setTimeout(() => res(5), 2000)),
     new Promise((res,rej) => setTimeout(() => rej(10), 1000)),
 ]).then(console.log); // first promise to resolve, '5' in this case`,

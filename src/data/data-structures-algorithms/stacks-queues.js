@@ -4,6 +4,8 @@ export const pageData = {
   cheats: [
     [
       { h2: `Stacks` },
+      { link: `https://algo.monster/problems/stack_intro` },
+      { link: `https://algo.monster/problems/javascript_overview` },
       {
         p: `A data structure where the last element in is the first element out (LIFO - last in, first out).  Stacks are
           typically implemented as a dynamic array as a singly linked list.`,
@@ -34,6 +36,8 @@ export const pageData = {
     ],
     [
       { h2: `Queues` },
+      { link: `https://algo.monster/problems/queue_intro` },
+      { link: `https://algo.monster/problems/javascript_overview` },
       {
         p: `A data structure where the first element in is the first element out (FIFO - first in, first out).  Queues are typically
           implemented as a doubly linked list.`,

@@ -43,6 +43,7 @@ export const pageData = {
 ]`,
         },
       },
+      { link: `https://algo.monster/problems/hashmap_intro` },
     ],
   ],
 }

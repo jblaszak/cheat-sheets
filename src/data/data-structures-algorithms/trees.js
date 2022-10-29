@@ -5,6 +5,7 @@ export const pageData = {
     except for the root node.`,
   cheats: [
     [
+      { link: `https://algo.monster/problems/javascript_overview` },
       { h2: `Tree Terminology` },
       {
         definitionList: [

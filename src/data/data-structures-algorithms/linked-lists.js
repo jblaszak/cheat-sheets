@@ -5,6 +5,7 @@ export const pageData = {
   to as the head while the last is called the tail.`,
   cheats: [
     [
+      { link: `https://algo.monster/problems/javascript_overview` },
       { h2: `Singly Linked Lists` },
       {
         p: `The head has a next value that points to another node. The tail has a next value of null. Add or removing nodes is as

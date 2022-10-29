@@ -50,6 +50,7 @@ export const pageData = {
           },
         ],
       },
+      { link: `https://algo.monster/problems/javascript_overview` },
     ],
   ],
 }

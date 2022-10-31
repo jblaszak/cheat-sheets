@@ -138,6 +138,14 @@ export const pageData = {
       },
     ],
     [
+      { h2: `IP (Internet Protocol)` },
+      {
+        p: `IP packets are the building blocks of internet communication. They contain two components: the header and the payload data. The header includes
+        the source address, the destination address.  Each payload portion is limited to 2^16 bytes (~65000 bytes).  Other protocols, like TCP are built
+        ontop of IP and include their own headers in the data portion of the IP packets.`,
+      },
+    ],
+    [
       { h2: `IP Address` },
       {
         p: `The address given to a machine that is connected to the public internet. For an IPv4 address, the format is a.b.c.d where the letters

@@ -112,7 +112,8 @@ const sum = arr.reduce(function(accumulator, currentValue, index, array) {
       { h2: `Sorting` },
       {
         p: `Used to sort elements in an array IN PLACE based on some criteria. Default function is to convert elements into strings and then
-          sort alphabetically.  `,
+          sort alphabetically. If returned value of the function passed to the sorting function is positive, it will sort the second value before
+          the first value.`,
       },
       {
         code: {

@@ -95,5 +95,61 @@ export const pageData = {
         to ensure CRUD operations are synchronized? When should you evict data from your cache?`,
       },
     ],
+    [
+      { h2: "Proxies" },
+      {
+        p: `Server that sits between a client and a server that acts on behalf of the client (in the case of a forward proxy). Client sends A
+        request the proxy and the proxy sends the request to the server.  The server then sends the response to the proxy and the proxy send it
+        back to the client. This masks the client's information from the server.`,
+      },
+      {
+        p: `For a reverse proxy, the process is similar with the proxy inbetween but the server's information is masked fom the client (i.e. 
+          the client thinks they are communicating with the server).  This can be useful if you want to cache or filter certain requests to 
+          reduce the load on your server or to handle logging. Proxies can also be used as load balancers! Using a proxy can also help guard against certain attacks
+          like DNS (spamming of requests) when used as a load balancer/filterer.`,
+      },
+    ],
+    [
+      { h2: "Load Balancers" },
+      {
+        p: `Prevents servers from getting overloaded, which helps decrease latency and increase throughput. Both physical and software based load
+        balancers exist. For hardware, you're limited to the hardware, but software you have much more options. A common approach is to use round
+        robin election meaning requests are forwarded to each machine consecutively in order of machine. Weighted round-robin can be used to send 
+        more requests to certain machines if they are more powerful. Load balancers can also perform health checks on servers to send more/less to
+        them based on their current load. Client IPs can also be hashed so future requests from that client can be redirected to the same server
+        (which would likely cache the request by that user and be able to serve requests to that client faster). Path based request routing is also
+        an option so different things like payments processing, or other parts of your site are handled by different servers and when updates are made
+        it only affects the one server.`,
+      },
+      {
+        p: `Multiple load balancers can be used that communicate to one another to decide how to reroute traffic.`,
+      },
+    ],
+    [
+      { h2: "Hashing" },
+      {
+        p: `Hashing is an action that transforms an arbitrary value into a fixed sized value (typically an integer). For systems design the data 
+        can be anything like an IP address or client name. A good hashing function should be quick and evenly distribute all hashes. These are 
+        useful properties for something like a load balancer that needs to reroute traffic to same server for request from the same client and 
+        also not overload that server with requests from other clients. Examples of some common hashing functions are NP5, BCrypt, SHA1.`,
+      },
+      {
+        p: `If servers fail or new ones are added, the hashing needs to be redone and a simple hashing strategy will alter the resulting hashes
+        greatly meaning servers that used to have the same client's requests will likely now recieve a different client's requests.`,
+      },
+      {
+        p: `Consistent hashing is a strategy that helps minimize this issue. Conceptually, all servers are put in a circle representing all possible
+        hashed values. A hashed value for a client's request will lie somewhere on that circle as well, and will get sent to the closest server based on 
+        the position on the circle. The hashing does not need to be redone and machines can be added/removed freely from that circle. This minimizes 
+        the amount of cache misses (requests from one client suddenly being sent to another server that doesn't have it cached). To further increase
+        the balance, servers can be hashed mutliple times and distributed evenly across the circle in case the hashing function prefers one part of the
+        circle over another. Stronger servers can be hashed more times so that more requests get sent to them.`,
+      },
+      {
+        p: `Rendevous hashing works by mapping clients to servers by computing a score for each server for each client by how much they 'prefer' them and sending
+        requests to the server that client prefers the most. If a server fails, the request is sent to the next highest rated server. This means only the
+        clients requests that were sent to the machine that failed need to switch machines.`,
+      },
+    ],
   ],
 }

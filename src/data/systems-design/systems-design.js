@@ -64,5 +64,36 @@ export const pageData = {
         link: `https://en.wikipedia.org/wiki/High_availability#Percentage_calculation`,
       },
     ],
+    [
+      { h2: "Caching" },
+      {
+        p: `Caching is used to improve or reduce the latency of a system by storing data in a location that is faster to access than it was originally
+        obtained from. Super useful if you're doing a lot of network requests for the same stuff or if the computation of the request takes a lot. Can
+        also be used if a specific database request is done by a large number of clients. Redis is an example of an in-memory key-value data store for such things.
+        Caching is great for immutable data.`,
+      },
+      {
+        p: `Write-through cache - caching system where when you write a piece of data it writes it to the cache and the database location at the same time. Downside of 
+        this is you still have to go to the database.`,
+      },
+      {
+        p: `Write-back cache - caching system where when you write a piece of data it writes it only to the cache immediately. Then whenever it decides,
+        either when cache is full or at specific times, it will write that change to the database. This means the cache can be out of sync with the database.
+        If anything happens to the cache in the meantime, there is potential for data loss.`,
+      },
+      {
+        p: `If staleness of data is important, like a comment section where you don't want users seeing old version of caches that are distributed over
+        lots of servers, you can use tools like Redis as a single cache that is separate from the servers that each client can access. For less important 
+        things, the servers can individually cache data and give stale versions.`,
+      },
+      {
+        p: `Caches have limited size. Common practice is to evict the Least Commonly Used (LRU) data or Least Frequently Used. Could release data 
+        using FIFO or randomly as well depending on the use case.`,
+      },
+      {
+        p: `Questions to ask: is the data immutable? Is it important for the data to be in sync across servers? If it is important, is there a handy way 
+        to ensure CRUD operations are synchronized? When should you evict data from your cache?`,
+      },
+    ],
   ],
 }

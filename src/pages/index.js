@@ -149,6 +149,7 @@ const IndexPage = () => {
     {
       categoryTitle: "Systems Design",
       articles: [
+        { title: "Storage", path: "/systems-design/storage" },
         { title: "Systems Design", path: "/systems-design/systems-design" },
       ],
     },

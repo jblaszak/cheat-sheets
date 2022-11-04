@@ -4,15 +4,6 @@ export const pageData = {
     up the system, the protocols, and the tools available as well as their strong/weak points is essential.`,
   cheats: [
     [
-      { h2: "Storage" },
-      {
-        p: `Data can be either written or read from a storage medium. Other ways of saying this are: storing/retrieving, setting/getting, recording/querying.
-        Storage for data can be either on disk or in memory. Anything stored in memory will be super quick to access but will be wiped when the process
-        dies or the server is restarted. Anything on disk will persist (hence the name persistant storage). Sometimes data is spread through mutliple 
-        servers for redundancy and if not all of them are up to date you can be given "stale" (out of date) data.`,
-      },
-    ],
-    [
       { h2: "Latency" },
       {
         p: `This is the time it takes for a request/response cycle for data.`,

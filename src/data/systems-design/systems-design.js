@@ -142,5 +142,37 @@ export const pageData = {
         clients requests that were sent to the machine that failed need to switch machines.`,
       },
     ],
+    [
+      { h2: `Leader Election` },
+      {
+        p: `When you have mutliple servers for redundancy purposes, you must be able to agree on which one is the leader so that requests are not 
+        doubled up anywhere. These systems complex math algorithms to reach a concensus, most commonly the Paxos and Raft algorithms which allow for the 
+        synchronization of certain operations, even in a distributed setting. Zookeper at Etcd are tools that allow you to implement leader election algorithms 
+        on your own.`,
+      },
+    ],
+    [
+      { h2: `Peer to Peer Networks` },
+      {
+        p: `In a peer to peer network, individual machines (peers) send parts of a complete file to one another. In order to discover one another and
+        know which parts to send to which other peer, another machine called a 'tracker' is used to coordinate transfers. If a tracker is not used,
+        then the 'Gossip' or 'Epidemic' protocol is used where machines tell one another which machine has which parts. This means the peers operate
+        by using a distributed hash table (DHT). By using P2P transfer, file distribution can be sped up by orders of magnitude!`,
+      },
+    ],
+    [
+      { h2: `Polling` },
+      {
+        p: `Client issues a request for data that it wants every X seconds. Good for data that changes often but where it is not needed instantaneously.
+        Could reduce the interval of requests but that increases the load of requests your servers recieves.`,
+      },
+    ],
+    [
+      { h2: `Streaming` },
+      {
+        p: `Using sockets (files that open/close connections in a long-lived way), you keep a continuous connection from the server to the client and the 
+        server pushes (sends data) continuously.`,
+      },
+    ],
   ],
 }

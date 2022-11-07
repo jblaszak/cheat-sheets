@@ -10,16 +10,16 @@ export const pageData = {
       },
       {
         definitionList: [
-          { title: `Read 1MB from memory`, defitition: `0.25 ms` },
-          { title: `Read 1MB from SSD`, defitition: `1 ms` },
+          { title: `Read 1MB from memory`, definition: `0.25 ms` },
+          { title: `Read 1MB from SSD`, definition: `1 ms` },
           {
             title: `Read 1MB over 1Gbps network (no distance)`,
-            defitition: `10 ms`,
+            definition: `10 ms`,
           },
-          { title: `Read 1MB from HDD`, defitition: `20 ms` },
+          { title: `Read 1MB from HDD`, definition: `20 ms` },
           {
             title: `Send packet roundtrip US West to Europe`,
-            defitition: `150 ms`,
+            definition: `150 ms`,
           },
         ],
       },
@@ -40,10 +40,10 @@ export const pageData = {
       },
       {
         definitionList: [
-          { title: `99%`, defitition: `3.65 days/year` },
-          { title: `99.9%`, defitition: `8.77 hrs/year` },
-          { title: `99.99%`, defitition: `52.60 minutes/year` },
-          { title: `99.999%`, defitition: `5.26 minutes/year` },
+          { title: `99%`, definition: `3.65 days/year` },
+          { title: `99.9%`, definition: `8.77 hrs/year` },
+          { title: `99.99%`, definition: `52.60 minutes/year` },
+          { title: `99.999%`, definition: `5.26 minutes/year` },
         ],
       },
       {
@@ -90,12 +90,12 @@ export const pageData = {
       { h2: "Proxies" },
       {
         p: `Server that sits between a client and a server that acts on behalf of the client (in the case of a forward proxy). Client sends A
-        request the proxy and the proxy sends the request to the server.  The server then sends the response to the proxy and the proxy send it
+        request the proxy and the proxy sends the request to the server. The server then sends the response to the proxy and the proxy send it
         back to the client. This masks the client's information from the server.`,
       },
       {
         p: `For a reverse proxy, the process is similar with the proxy inbetween but the server's information is masked fom the client (i.e. 
-          the client thinks they are communicating with the server).  This can be useful if you want to cache or filter certain requests to 
+          the client thinks they are communicating with the server). This can be useful if you want to cache or filter certain requests to 
           reduce the load on your server or to handle logging. Proxies can also be used as load balancers! Using a proxy can also help guard against certain attacks
           like DNS (spamming of requests) when used as a load balancer/filterer.`,
       },
@@ -212,6 +212,75 @@ export const pageData = {
         is not confirmed by subscriber). Pub/Sub systems typically use qeue to send messages. Because of the persistant storage, you can look at old info.
         Apache Kafka or Google Cloud Pub/Sub are some good solutions to implement these. Key benefits: at-least-once delivery, persistent storage, ordering
         of messages, and replayability of messages.`,
+      },
+    ],
+    [
+      { h2: `Map Reduce` },
+      {
+        p: `Useful for when your data is distributed across many machines. First step (map) is to transform your data into key-value pairs, then you 
+        reduce those key values pairs into a final output or file. The control plane is aware of all the data, it's replications, they key-value pairs
+        and the outputs. Because the data is typically very large, it is kept where it is kept and the mapping is done on the same machine.  The map and 
+        reduce functions are idempotent (same outcome every time). Common example of this counting the occurance of words in distributed text files. Could
+        use this to get count of total views on a youtube channel or count the total number of logs from a logging service over a specific time. Hadoop
+        and GFS (Google File System) are two common DFSs (Distributed File Systems) used to make a large cluster of machines act like on large file system.
+        Hadoop supports MapReduce and many other kinds of data-processing pipelines.`,
+      },
+    ],
+    [
+      { h2: `API Design` },
+      {
+        p: `First need to ask, which part of the system you are designing and what functionality it needs to support. Who is going to be consuming the API?
+        Need to write out the entities and resources the API will rely on, the endpoints, the parameters the API will take, and the responses the API will return.
+        Plain text example below, but could also use Swagger to define your API.`,
+      },
+      {
+        code: {
+          language: `text`,
+          code: `# API Definition
+
+## Entity Definitions
+### Charge:
+- id: uuid
+- customer_id: uuid
+- amount: integer
+- currency: string (or currency-code enum)
+- status: enum ["succeeeded", "pending", "failed"]
+
+### Customer:
+- id: uuid
+- name: string
+- address: string
+- email: string
+- card: Card
+
+### Card
+....
+
+## Endpoint Definitions
+### Charges
+CreateCharge(charge: Charge)
+  => Charge
+GetCharge(id: uuid)
+  => Charge
+UpdateCharge(id: uuid, updatedCharge: Charge)
+  => Charge
+ListCharges(offset: integer, limit: integer)
+  => Charge[]
+CaptureCharge(id: uuid)
+  => Charge
+  
+### Customers
+CreateCustomers(customer: Customer)
+  => Customer
+GetCustomer(id: uuid)
+  => Customer
+UpdateCustomer(id: uuid, updatedCustomer: Customer)
+  => Customer
+DeleteCustomer(id: uuid)
+  => Customer
+ListCustomers(offset: integer, limit: integer)
+  => Customer[]`,
+        },
       },
     ],
   ],

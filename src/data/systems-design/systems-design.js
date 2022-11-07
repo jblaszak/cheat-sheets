@@ -174,5 +174,45 @@ export const pageData = {
         server pushes (sends data) continuously.`,
       },
     ],
+    [
+      { h2: `Configuration` },
+      {
+        p: `Can use configuration files to store parameters or constants that are critical to your system. These can be written in JSON or YAML files,
+        and are either static (meaning they ship with your deployment and have to be redeployed whenever you make a change) or dynamic, where the 
+        config parameters are in a database or somewhere else outside your system's application code.`,
+      },
+    ],
+    [
+      { h2: `Rate Limiting` },
+      {
+        p: `When you limit requests to your system based on certain restrictions. This can be either restricting the number of requests per second/minute
+        per region/ip address/user, etc. Helps prevent against Denial of Service (DOS), but is still vulnerable to distributed DOS (DDOS) attacks. For systems
+        that have multiple servers, you can use a Redis server to handle rate-limiting. This rate limiting can also be done in tiers using more complex logic
+        to limit both 1 every second and 5 every 30 seconds.`,
+      },
+    ],
+    [
+      { h2: `Logging and Monitoring` },
+      {
+        p: `Logs are extremely useful to figure out what's going wrong in your system when it occurs. These are typically either is JSON or SysLog format.
+        Google StackDriver is a great service for keeping track of such logs. These sorts of logs can also be use to track helpful metrics like how many
+        people are logging into your system and at what times, the sign on service they're using, the latency they experience, etc. Can also use a time series
+        database like InfluxDB, Prometheus, or Graphite to store these logs. In order to visualize these logs, can use a service like Graphana to create
+        nice charts. Can integrate logging with monitoring services so when a certain metric is above a certain threshold, you can send a message to a Slack
+        chat.`,
+      },
+    ],
+    [
+      { h2: `Publish/Subscribe Pattern` },
+      {
+        p: `This pattern is broken up into three components, a publisher, a topic, and a subscriber. The publisher sends messages to the topic, which
+        is a persistant storage solution, which then sends data to each subscriber and keeps track of which messages have been sent to which subscriber.
+        These use idempotent operations (operations that perform the same no matter how many times they are performed, i.e. a counter incrementing is not 
+        idempotent but a status flag change to "success" is). Messages are guaranteed to be sent at least once (could be more if disconnects and acknowledgement
+        is not confirmed by subscriber). Pub/Sub systems typically use qeue to send messages. Because of the persistant storage, you can look at old info.
+        Apache Kafka or Google Cloud Pub/Sub are some good solutions to implement these. Key benefits: at-least-once delivery, persistent storage, ordering
+        of messages, and replayability of messages.`,
+      },
+    ],
   ],
 }

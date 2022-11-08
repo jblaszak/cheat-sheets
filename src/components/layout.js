@@ -28,10 +28,7 @@ const Layout = ({ children }) => {
       <div className={styles.mainBody}>
         <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()} &middot; Jo Blaszak &middot; Built with
-          <a href="https://www.gatsbyjs.com"> Gatsby</a>
-        </footer>
+        <footer>© {new Date().getFullYear()} &middot; Jo Blaszak</footer>
       </div>
     </>
   )

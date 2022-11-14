@@ -133,5 +133,34 @@ class StringNumGetterSetter implements GetterSetter<string, number> {
         },
       },
     ],
+    [
+      { h2: `Typescript with React` },
+      { p: `Can create a react app typescript template with CRA easily.` },
+      {
+        code: {
+          language: `bash`,
+          code: `npx create-react-app myAppName --template typescript`,
+        },
+      },
+      { p: `Typescript ` },
+      {
+        code: {
+          language: `javascript`,
+          code: `interface CoolProps {
+  foo: number;
+  bar: string;
+}
+
+const Cool:FC<CoolProps> = (props) => {
+  return <>{ props }</>;
+}
+
+// OR
+const Cool = (props: CoolProps) => {
+  
+}`,
+        },
+      },
+    ],
   ],
 }

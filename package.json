@@ -26,6 +26,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "prettier": "^2.7.1"
   },
   "keywords": [
@@ -36,6 +37,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b main",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",

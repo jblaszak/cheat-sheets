@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/cheat-sheets",
   siteMetadata: {
     title: `Jo's Developer Cheat Sheet`,
     description: `My cheat sheet of helpful web developer code snippets and theories!`,

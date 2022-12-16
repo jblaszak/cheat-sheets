@@ -10,6 +10,7 @@ import * as styles from "./cheatPage.module.css"
 
 const Template = ({ pageData }) => {
   const location = useLocation()
+  const path = location.pathname.substring(13) // will break local, but needed for github pages hosting given repository name of "cheat-sheets/"
 
   // Create table of contents
   let inSubList = false
@@ -29,13 +30,13 @@ const Template = ({ pageData }) => {
         }
         tableOfContents.push(
           <li key={h2}>
-            <Link to={`${location.pathname}#${h2}`}>{h2}</Link>
+            <Link to={`${path}#${h2}`}>{h2}</Link>
           </li>
         )
       } else if (h3 !== undefined) {
         subList.push(
           <li key={h3}>
-            <Link to={`${location.pathname}#${h3}`}>{h3}</Link>
+            <Link to={`${path}#${h3}`}>{h3}</Link>
           </li>
         )
         inSubList = true
